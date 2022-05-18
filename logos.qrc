@@ -1,0 +1,17 @@
+<RCC>
+  <qresource prefix="logos">
+    <file>Images/Unillanos.png</file>
+    <file>Images/battery.jpg</file>
+    <file>Images/battery-level.jpg</file>
+    <file>Images/electric (1).jpg</file>
+    <file>Images/electric.jpg</file>
+    <file>Images/full-battery.jpg</file>
+    <file>Images/half-battery.jpg</file>
+    <file>Images/heart-monitoring.jpg</file>
+    <file>Images/low low battery.jpg</file>
+    <file>Images/low-battery.jpg</file>
+    <file>Images/old-man.jpg</file>
+    <file>Images/oxygen-mask.jpg</file>
+    <file>Images/ventilation.jpg</file>
+  </qresource>
+</RCC>
