@@ -36,7 +36,8 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
         
         self.y2 = [randint(0,100) for _ in range(100)]  # 100 data points
 
-        self.graphWidget.setBackground('w')    
+        self.graphWidget_1.setBackground('w')    
+        self.graphWidget_2.setBackground('w')    
                     
     def update_plot_data(self):
         self.x = self.x[1:]  # Remove the first y element.
@@ -63,8 +64,8 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
         
         pen = pg.mkPen(color=(255, 0, 0))
         pen2 = pg.mkPen(color=(0, 0, 255))
-        self.data_line_1 =  self.graphWidget.plot(self.x, self.y, pen=pen)        
-        self.data_line_2 =  self.graphWidget.plot(self.x, self.y2, pen=pen2)
+        self.data_line_1 =  self.graphWidget_1.plot(self.x, self.y, pen=pen)        
+        self.data_line_2 =  self.graphWidget_2.plot(self.x, self.y2, pen=pen2)
         
         self.timer = QtCore.QTimer()
         self.timer.setInterval(50)
@@ -77,7 +78,8 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
         self.on.setEnabled(True)
         self.off.setEnabled(False)
         
-        self.graphWidget.clear()
+        self.graphWidget_1.clear()
+        self.graphWidget_2.clear()
         self.timer.stop()     
         
 #-----------------------------------------------------------------------------------------------------------------#
