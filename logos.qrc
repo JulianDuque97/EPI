@@ -1,5 +1,7 @@
 <RCC>
   <qresource prefix="logos">
+    <file>Images/conversation.png</file>
+    <file>Images/right-arrow.png</file>
     <file>Images/Unillanos.png</file>
     <file>Images/battery.jpg</file>
     <file>Images/battery-level.jpg</file>
