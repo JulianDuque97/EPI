@@ -14,9 +14,9 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(620, 360)
-        MainWindow.setMinimumSize(QtCore.QSize(620, 360))
-        MainWindow.setMaximumSize(QtCore.QSize(620, 360))
+        MainWindow.resize(1024, 600)
+        MainWindow.setMinimumSize(QtCore.QSize(1024, 600))
+        MainWindow.setMaximumSize(QtCore.QSize(16777215, 16777215))
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(":/logos/Images/heart-monitoring.jpg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
@@ -103,9 +103,9 @@ class Ui_MainWindow(object):
         self.gridLayout_2.addItem(spacerItem3, 3, 0, 1, 1)
         self.gridLayout.addWidget(self.frame, 0, 1, 1, 1)
         spacerItem4 = QtWidgets.QSpacerItem(500, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout.addItem(spacerItem4, 0, 0, 1, 1)
+        self.gridLayout.addItem(spacerItem4, 0, 2, 1, 1)
         spacerItem5 = QtWidgets.QSpacerItem(500, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout.addItem(spacerItem5, 0, 2, 1, 1)
+        self.gridLayout.addItem(spacerItem5, 0, 0, 1, 1)
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
