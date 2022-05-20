@@ -14,7 +14,8 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(922, 642)
+        MainWindow.resize(1024, 600)
+        MainWindow.setMinimumSize(QtCore.QSize(1024, 600))
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(":/logos/Images/heart-monitoring.jpg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
