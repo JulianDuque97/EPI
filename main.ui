@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1029</width>
-    <height>600</height>
+    <width>1024</width>
+    <height>580</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -22,7 +22,7 @@
   <property name="minimumSize">
    <size>
     <width>1024</width>
-    <height>600</height>
+    <height>580</height>
    </size>
   </property>
   <property name="maximumSize">
@@ -87,10 +87,10 @@
         <number>0</number>
        </property>
        <property name="topMargin">
-        <number>0</number>
+        <number>6</number>
        </property>
        <property name="rightMargin">
-        <number>15</number>
+        <number>10</number>
        </property>
        <property name="bottomMargin">
         <number>0</number>
@@ -203,6 +203,12 @@
     <item row="1" column="0" rowspan="2">
      <layout class="QVBoxLayout" name="verticalLayout_2">
       <property name="spacing">
+       <number>5</number>
+      </property>
+      <property name="leftMargin">
+       <number>5</number>
+      </property>
+      <property name="rightMargin">
        <number>5</number>
       </property>
       <item>
@@ -575,7 +581,7 @@ color: rgb(255, 255, 255);</string>
       <property name="maximumSize">
        <size>
         <width>16777215</width>
-        <height>45</height>
+        <height>55</height>
        </size>
       </property>
       <property name="frameShape">
@@ -1528,7 +1534,7 @@ QPushButton:hover:!pressed
         <number>10</number>
        </property>
        <property name="topMargin">
-        <number>0</number>
+        <number>10</number>
        </property>
        <property name="rightMargin">
         <number>10</number>
