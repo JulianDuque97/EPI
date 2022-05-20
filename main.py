@@ -1,3 +1,4 @@
+"Hello"
 import sys, time, os, traceback
 from random import randint
 
