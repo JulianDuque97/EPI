@@ -1368,7 +1368,7 @@ QPushButton:hover:!pressed
               </property>
               <property name="font">
                <font>
-                <pointsize>13</pointsize>
+                <pointsize>11</pointsize>
                 <weight>50</weight>
                 <italic>false</italic>
                 <bold>false</bold>
@@ -1382,7 +1382,7 @@ QPushButton:hover:!pressed
                <string notr="true">color: rgb(154, 153, 150);</string>
               </property>
               <property name="text">
-               <string>Variables no enviadas</string>
+               <string>Parametros no enviadas</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
@@ -1394,7 +1394,7 @@ QPushButton:hover:!pressed
               <property name="minimumSize">
                <size>
                 <width>0</width>
-                <height>40</height>
+                <height>45</height>
                </size>
               </property>
               <property name="maximumSize">
@@ -1439,7 +1439,7 @@ QPushButton:hover:!pressed
               <property name="minimumSize">
                <size>
                 <width>0</width>
-                <height>40</height>
+                <height>45</height>
                </size>
               </property>
               <property name="maximumSize">
