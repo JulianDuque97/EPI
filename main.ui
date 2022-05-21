@@ -710,7 +710,7 @@ QPushButton:hover:!pressed
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="systems">
+        <widget class="QPushButton" name="variable_button">
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -1382,7 +1382,7 @@ QPushButton:hover:!pressed
                <string notr="true">color: rgb(154, 153, 150);</string>
               </property>
               <property name="text">
-               <string>Parametros no enviadas</string>
+               <string>Parametros no enviados</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>

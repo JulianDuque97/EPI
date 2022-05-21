@@ -1,4 +1,3 @@
-"Hello"
 import sys, time, os, traceback
 from random import randint
 
@@ -54,12 +53,15 @@ class MyApp(QMainWindow):
                 
         self.on.setEnabled(True)
         self.off.setEnabled(False)
-        self.on.toggle()
-        self.off.toggle()
-        self.systems.toggle()
+        self.play_stop_button.setEnabled(False)
+        self.variable_button.toggle()
         self.on.clicked.connect(self.btn_on)
         self.off.clicked.connect(self.btn_off)
+        self.play_stop_button.clicked.connect(self.play_stop)
         self.datos_button.clicked.connect(self.datos_paciente)
+        self.variable_button.clicked.connect(self.variables_paciente)
+        
+        self.on_off = 0
                                 
         self.x = list(range(100))  # 100 time points
         
@@ -69,11 +71,25 @@ class MyApp(QMainWindow):
 
         self.graphWidget_1.setBackground('w')    
         self.graphWidget_2.setBackground('w')
-        self.graphWidget_3.setBackground('w')    
+        self.graphWidget_3.setBackground('w')
+        
+    def play_stop(self):
+        
+        if self.on_off == 1:
+            self.on_off = 0
+            self.timer.start()
+        else:
+            self.on_off = 1
+            self.timer.stop()    
     
     def datos_paciente(self):
         self.hide()
         next_window = Datos_paciente(self)
+        next_window.show()
+        
+    def variables_paciente(self):
+        self.hide()
+        next_window = Variables_paciente(self)
         next_window.show()                       
     
     def update_plot_data(self):
@@ -98,6 +114,7 @@ class MyApp(QMainWindow):
         
     def btn_on(self):
         
+        self.play_stop_button.setEnabled(True)
         self.img_on_off.setPixmap(QtGui.QPixmap("Images/oxygen-mask.jpg"))
         self.lb_on_off.setText("System: On")
         self.on.setEnabled(False)
@@ -116,17 +133,27 @@ class MyApp(QMainWindow):
         self.timer.start()
                                
     def btn_off(self):
+        self.play_stop_button.setEnabled(False)
         self.img_on_off.setPixmap(QtGui.QPixmap("Images/old-man.jpg"))
         self.lb_on_off.setText("System: Off")
         self.on.setEnabled(True)
         self.off.setEnabled(False)
-        
+        self.on_off = 0
         self.graphWidget_1.clear()
         self.graphWidget_2.clear()
         self.graphWidget_3.clear()
         self.timer.stop()     
         
-	
+class Variables_paciente(QMainWindow):
+    def __init__(self, parent=None):
+        super(Variables_paciente, self).__init__(parent)
+        loadUi('Variables.ui', self)
+        self.back_button.clicked.connect(self.siguiente)
+        
+    def siguiente(self):
+        self.hide()
+        previous_window = MyApp(self)
+        previous_window.show()
 #-----------------------------------------------------------------------------------------------------------------#
 #-----------------------------------------------------------------------------------------------------------------#
 app = QApplication(sys.argv)

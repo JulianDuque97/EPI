@@ -340,14 +340,14 @@ class Ui_MainWindow(object):
         self.off.setCheckable(True)
         self.off.setObjectName("off")
         self.horizontalLayout_5.addWidget(self.off)
-        self.systems = QtWidgets.QPushButton(self.frame_5)
-        self.systems.setMinimumSize(QtCore.QSize(0, 45))
+        self.variable_button = QtWidgets.QPushButton(self.frame_5)
+        self.variable_button.setMinimumSize(QtCore.QSize(0, 45))
         font = QtGui.QFont()
         font.setPointSize(15)
         font.setBold(True)
         font.setWeight(75)
-        self.systems.setFont(font)
-        self.systems.setStyleSheet("QPushButton{\n"
+        self.variable_button.setFont(font)
+        self.variable_button.setStyleSheet("QPushButton{\n"
 "    color: rgb(247, 247, 247);\n"
 "    background-color: rgb(230, 97, 0);\n"
 "    border-radius: 10%;\n"
@@ -362,9 +362,9 @@ class Ui_MainWindow(object):
 "  border: 1.5px solid black;\n"
 "}\n"
 "")
-        self.systems.setCheckable(True)
-        self.systems.setObjectName("systems")
-        self.horizontalLayout_5.addWidget(self.systems)
+        self.variable_button.setCheckable(True)
+        self.variable_button.setObjectName("variable_button")
+        self.horizontalLayout_5.addWidget(self.variable_button)
         self.gridLayout_7.addWidget(self.frame_5, 3, 0, 1, 2)
         self.frame_18 = QtWidgets.QFrame(self.centralwidget)
         self.frame_18.setMinimumSize(QtCore.QSize(0, 0))
@@ -905,7 +905,7 @@ class Ui_MainWindow(object):
         self.label.setText(_translate("MainWindow", "Monitoring"))
         self.on.setText(_translate("MainWindow", "ON"))
         self.off.setText(_translate("MainWindow", "OFF"))
-        self.systems.setText(_translate("MainWindow", "Variables"))
+        self.variable_button.setText(_translate("MainWindow", "Variables"))
         self.label_26.setText(_translate("MainWindow", "Parametros"))
         self.label_19.setText(_translate("MainWindow", "VOLUMEN"))
         self.minus_1.setText(_translate("MainWindow", "-"))
@@ -922,7 +922,7 @@ class Ui_MainWindow(object):
         self.minus_3.setText(_translate("MainWindow", "-"))
         self.plus_3.setText(_translate("MainWindow", "+"))
         self.label_4.setText(_translate("MainWindow", "s"))
-        self.label_25.setText(_translate("MainWindow", "Parametros no enviadas"))
+        self.label_25.setText(_translate("MainWindow", "Parametros no enviados"))
         self.enviar_button.setText(_translate("MainWindow", "Enviar parametros"))
         self.datos_button.setText(_translate("MainWindow", "Datos paciente"))
         self.lb_on_off.setWhatsThis(_translate("MainWindow", "<html><head/><body><p>System: Off</p></body></html>"))
