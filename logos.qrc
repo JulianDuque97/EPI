@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="logos">
+    <file>Images/left-arrow.png</file>
     <file>Images/conversation.png</file>
     <file>Images/right-arrow.png</file>
     <file>Images/Unillanos.png</file>
