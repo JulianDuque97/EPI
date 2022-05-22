@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'd:\Documents\Projects\EPI\pop_up.ui'
+# Form implementation generated from reading ui file 'd:\Documents\Projects\EPI\pop_up_2.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.6
 #
@@ -49,6 +49,8 @@ class Ui_MainWindow(object):
         self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_2.setObjectName("frame_2")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.frame_2)
+        self.verticalLayout.setContentsMargins(15, 0, 15, 0)
+        self.verticalLayout.setSpacing(0)
         self.verticalLayout.setObjectName("verticalLayout")
         self.label_43 = QtWidgets.QLabel(self.frame_2)
         font = QtGui.QFont()
@@ -70,15 +72,15 @@ class Ui_MainWindow(object):
         self.horizontalLayout.setObjectName("horizontalLayout")
         spacerItem2 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout.addItem(spacerItem2)
-        self.ok_button = QtWidgets.QPushButton(self.centralwidget)
-        self.ok_button.setMinimumSize(QtCore.QSize(140, 40))
-        self.ok_button.setMaximumSize(QtCore.QSize(140, 16777215))
+        self.no_button = QtWidgets.QPushButton(self.centralwidget)
+        self.no_button.setMinimumSize(QtCore.QSize(140, 40))
+        self.no_button.setMaximumSize(QtCore.QSize(140, 16777215))
         font = QtGui.QFont()
         font.setPointSize(15)
         font.setBold(True)
         font.setWeight(75)
-        self.ok_button.setFont(font)
-        self.ok_button.setStyleSheet("QPushButton{\n"
+        self.no_button.setFont(font)
+        self.no_button.setStyleSheet("QPushButton{\n"
 "    color: rgb(247, 247, 247);\n"
 "    background-color: rgb(51, 209, 122);\n"
 "    border-radius: 10%;\n"
@@ -92,9 +94,34 @@ class Ui_MainWindow(object):
 "{\n"
 "  border: 1.5px solid black;\n"
 "}")
-        self.ok_button.setCheckable(True)
-        self.ok_button.setObjectName("ok_button")
-        self.horizontalLayout.addWidget(self.ok_button)
+        self.no_button.setCheckable(True)
+        self.no_button.setObjectName("no_button")
+        self.horizontalLayout.addWidget(self.no_button)
+        self.si_button = QtWidgets.QPushButton(self.centralwidget)
+        self.si_button.setMinimumSize(QtCore.QSize(140, 40))
+        self.si_button.setMaximumSize(QtCore.QSize(140, 16777215))
+        font = QtGui.QFont()
+        font.setPointSize(15)
+        font.setBold(True)
+        font.setWeight(75)
+        self.si_button.setFont(font)
+        self.si_button.setStyleSheet("QPushButton{\n"
+"    color: rgb(247, 247, 247);\n"
+"    background-color: rgb(51, 209, 122);\n"
+"    border-radius: 10%;\n"
+"    border: 1px solid #000;\n"
+"    \n"
+"}\n"
+"\n"
+"QPushButton:hover {background-color: rgb(230, 97, 0);}\n"
+"\n"
+"QPushButton:hover:!pressed\n"
+"{\n"
+"  border: 1.5px solid black;\n"
+"}")
+        self.si_button.setCheckable(True)
+        self.si_button.setObjectName("si_button")
+        self.horizontalLayout.addWidget(self.si_button)
         spacerItem3 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout.addItem(spacerItem3)
         self.verticalLayout_2.addLayout(self.horizontalLayout)
@@ -111,6 +138,9 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Ventilador mecanico"))
-        self.label_43.setText(_translate("MainWindow", "Datos del paciente guardados"))
-        self.ok_button.setText(_translate("MainWindow", "OK"))
+        self.label_43.setText(_translate("MainWindow", "Seguro que desea cambiar los datos del paciente? \n"
+"\n"
+"Esto reiniciara el sistema."))
+        self.no_button.setText(_translate("MainWindow", "No"))
+        self.si_button.setText(_translate("MainWindow", "Si"))
 import logos_rc
