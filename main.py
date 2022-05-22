@@ -31,26 +31,29 @@ class Datos_paciente(QMainWindow):
         self.covid = self.covid_linedit.text()
         
     def siguiente(self):
-        self.hide()
-        previous_window = Pop_up(self)
+        self.close()
+        previous_window = Pop_up_1(self)
         previous_window.show()	
         
-class Pop_up(QMainWindow):
+class Pop_up_1(QMainWindow):
     def __init__(self, parent=None):
-        super(Pop_up, self).__init__(parent)
-        loadUi('pop_up.ui', self)
+        super(Pop_up_1, self).__init__(parent)
+        loadUi('pop_up_1.ui', self)
         self.ok_button.clicked.connect(self.siguiente)
         
     def siguiente(self):
-        self.hide()
-        previous_window = MyApp(self)
-        previous_window.show()
+        self.close()
+        next_window = MyApp(self)
+        next_window.show()
+    
+    def close_(self):
+        self.close()
 
 class MyApp(QMainWindow):
+    
     def __init__(self, parent=None):
         super(MyApp, self).__init__(parent)
         loadUi('main.ui', self)
-                
         self.on.setEnabled(True)
         self.off.setEnabled(False)
         self.play_stop_button.setEnabled(False)
@@ -83,12 +86,10 @@ class MyApp(QMainWindow):
             self.timer.stop()    
     
     def datos_paciente(self):
-        self.hide()
-        next_window = Datos_paciente(self)
+        next_window = Pop_up_2(self)
         next_window.show()
         
     def variables_paciente(self):
-        self.hide()
         next_window = Variables_paciente(self)
         next_window.show()                       
     
@@ -142,8 +143,23 @@ class MyApp(QMainWindow):
         self.graphWidget_1.clear()
         self.graphWidget_2.clear()
         self.graphWidget_3.clear()
-        self.timer.stop()     
+        self.timer.stop()       
+
+class Pop_up_2(MyApp):
+    def __init__(self, MyApp):
+        super(Pop_up_2, self).__init__(MyApp)
+        loadUi('pop_up_2.ui', self)
+        self.no_button.clicked.connect(self.no)
+        self.si_button.clicked.connect(self.si)
         
+    def no(self):
+        self.close()
+                             
+    def si(self):
+        self.close()
+        main.show()
+        
+                 
 class Variables_paciente(QMainWindow):
     def __init__(self, parent=None):
         super(Variables_paciente, self).__init__(parent)
@@ -151,9 +167,9 @@ class Variables_paciente(QMainWindow):
         self.back_button.clicked.connect(self.siguiente)
         
     def siguiente(self):
-        self.hide()
-        previous_window = MyApp(self)
-        previous_window.show()
+        self.close()
+        # previous_window = MyApp(self)
+        # previous_window.show()
 #-----------------------------------------------------------------------------------------------------------------#
 #-----------------------------------------------------------------------------------------------------------------#
 app = QApplication(sys.argv)
