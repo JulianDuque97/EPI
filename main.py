@@ -8,47 +8,45 @@ from PyQt5.QtWidgets import QApplication, QMainWindow
 from PyQt5.uic import loadUi
 from PyQt5 import QtGui
 from PyQt5 import QtCore
+
 import logos_rc
 #-----------------------------------------------------------------------------------------------------------------#
 #GUI
-class Datos_paciente(QMainWindow):
+class Datos_paciente_(QMainWindow):
     def __init__(self, parent=None):
-        super(Datos_paciente, self).__init__(parent)
+        super(Datos_paciente_, self).__init__(parent)
         loadUi('Datos_paciente.ui', self)
-        self.altura_linedit.editingFinished.connect(self.datos)
-        self.peso_linedit.editingFinished.connect(self.datos)
-        self.sexo_linedit.editingFinished.connect(self.datos)
-        self.covid_linedit.editingFinished.connect(self.datos)
+        self.altura_linedit.editingFinished.connect(self.dato_altura)
+        self.peso_linedit.editingFinished.connect(self.dato_peso)
+        self.sexo_linedit.editingFinished.connect(self.dato_sexo)
+        self.covid_linedit.editingFinished.connect(self.dato_covid)
         self.siguiente_button.clicked.connect(self.siguiente)
         
-    def datos(self):
+    def dato_altura(self):
         self.altura = self.altura_linedit.text()
+        self.altura_linedit.setEnabled(False)
+        return self.altura
+            
+    def dato_peso(self):
         self.peso = self.peso_linedit.text()
-        self.sexo = self.sexo_linedit.text()
-        self.covid = self.covid_linedit.text()
-        
-    def siguiente(self):
-        self.close()
-        previous_window = Pop_up_1(self)
-        previous_window.show()	
-        
-class Pop_up_1(QMainWindow):
-    def __init__(self, parent=None):
-        super(Pop_up_1, self).__init__(parent)
-        loadUi('pop_up_1.ui', self)
-        self.ok_button.clicked.connect(self.siguiente)
-        
-    def siguiente(self):
-        self.close()
-        next_window = MyApp(self)
-        next_window.show()
+        self.peso_linedit.setEnabled(False)
     
-    def close_(self):
+    def dato_sexo(self):
+        self.sexo = self.sexo_linedit.text()
+        self.sexo_linedit.setEnabled(False)
+    
+    def dato_covid(self):
+        self.covid = self.covid_linedit.text()
+        self.covid_linedit.setEnabled(False)
+            
+    def siguiente(self):
         self.close()
-
+        previous_window = MyApp(self)
+        previous_window.show()
+        	
 class MyApp(QMainWindow):
     
-    def __init__(self, parent=None):
+    def __init__(self,  parent=None):
         super(MyApp, self).__init__(parent)
         loadUi('main.ui', self)
         self.on.setEnabled(True)
@@ -60,7 +58,7 @@ class MyApp(QMainWindow):
         self.play_stop_button.clicked.connect(self.play_stop)
         self.datos_button.clicked.connect(self.datos_paciente)
         self.variable_button.clicked.connect(self.variables_paciente)
-        
+                        
         self.on_off = 0
                                 
         self.x = list(range(100))  # 100 time points
@@ -83,7 +81,8 @@ class MyApp(QMainWindow):
             self.timer.stop()    
     
     def datos_paciente(self):
-        next_window = Pop_up_2(self)
+        self.close()
+        next_window = Datos_paciente_(self)
         next_window.show()
         
     def variables_paciente(self):
@@ -140,36 +139,25 @@ class MyApp(QMainWindow):
         self.graphWidget_1.clear()
         self.graphWidget_2.clear()
         self.graphWidget_3.clear()
-        self.timer.stop()       
-
-class Pop_up_2(MyApp):
+        self.timer.stop()     
+        
+        self.close()  
+        
+class Variables_paciente(MyApp):
     def __init__(self, MyApp):
-        super(Pop_up_2, self).__init__(MyApp)
-        loadUi('pop_up_2.ui', self)
-        self.no_button.clicked.connect(self.no)
-        self.si_button.clicked.connect(self.si)
-        
-    def no(self):
-        self.close()
-                             
-    def si(self):
-        self.close()
-        main.show()
-        
-                 
-class Variables_paciente(QMainWindow):
-    def __init__(self, parent=None):
-        super(Variables_paciente, self).__init__(parent)
+        super(Variables_paciente, self).__init__(MyApp)
         loadUi('Variables.ui', self)
-        self.back_button.clicked.connect(self.siguiente)
+        self.back_button.clicked.connect(self.back)
+        self.dato_altura_ = Datos_paciente_.dato_altura(self)
+        # self.altura_label.setText(self.dato_altura)
         
-    def siguiente(self):
+    def back(self):
         self.close()
-        # previous_window = MyApp(self)
-        # previous_window.show()
-#-----------------------------------------------------------------------------------------------------------------#
+         
+
+        
 #-----------------------------------------------------------------------------------------------------------------#
 app = QApplication(sys.argv)
-main = Datos_paciente()
+main = Datos_paciente_()
 main.show()
 sys.exit(app.exec_())

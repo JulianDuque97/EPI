@@ -111,47 +111,6 @@
           </spacer>
          </item>
          <item>
-          <widget class="QLabel" name="label_6">
-           <property name="minimumSize">
-            <size>
-             <width>30</width>
-             <height>0</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>B1</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_9">
-           <property name="minimumSize">
-            <size>
-             <width>26</width>
-             <height>26</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>26</width>
-             <height>26</height>
-            </size>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">border-image: url(:/logos/Images/full-battery.jpg);</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item>
           <widget class="QLabel" name="label_8">
            <property name="minimumSize">
             <size>
@@ -160,7 +119,7 @@
             </size>
            </property>
            <property name="text">
-            <string>B2</string>
+            <string>Altura(cm):</string>
            </property>
            <property name="alignment">
             <set>Qt::AlignCenter</set>
@@ -168,32 +127,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QLabel" name="label_12">
-           <property name="minimumSize">
-            <size>
-             <width>26</width>
-             <height>26</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>26</width>
-             <height>26</height>
-            </size>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">border-image: url(:/logos/Images/full-battery.jpg);</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_10">
+          <widget class="QLabel" name="altura_label">
            <property name="minimumSize">
             <size>
              <width>30</width>
@@ -201,10 +135,10 @@
             </size>
            </property>
            <property name="text">
-            <string>AC</string>
+            <string>160</string>
            </property>
            <property name="alignment">
-            <set>Qt::AlignCenter</set>
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
            </property>
           </widget>
          </item>
@@ -212,21 +146,95 @@
           <widget class="QLabel" name="label_11">
            <property name="minimumSize">
             <size>
-             <width>26</width>
-             <height>26</height>
+             <width>30</width>
+             <height>0</height>
             </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>26</width>
-             <height>26</height>
-            </size>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">border-image: url(:/logos/Images/electric.jpg);</string>
            </property>
            <property name="text">
-            <string/>
+            <string>Peso(Kg):</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="peso_label">
+           <property name="minimumSize">
+            <size>
+             <width>30</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>60</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_13">
+           <property name="minimumSize">
+            <size>
+             <width>30</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>Sexo:</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="sexo_label">
+           <property name="minimumSize">
+            <size>
+             <width>30</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>M</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_15">
+           <property name="minimumSize">
+            <size>
+             <width>30</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>Covid:</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="covid_label">
+           <property name="minimumSize">
+            <size>
+             <width>30</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>No</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
            </property>
           </widget>
          </item>
