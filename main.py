@@ -52,15 +52,15 @@ class MyApp(Datos_paciente_):
     def __init__(self,  Datos_paciente_):
         super(MyApp, self).__init__(Datos_paciente_)
         loadUi('main.ui', self)
-        self.on.setEnabled(True)
-        self.off.setEnabled(False)
-        self.play_stop_button.setEnabled(False)
-        self.variable_button.toggle()
-        self.on.clicked.connect(self.btn_on)
-        self.off.clicked.connect(self.btn_off)
-        self.play_stop_button.clicked.connect(self.play_stop)
-        self.datos_button.clicked.connect(self.datos_paciente)
-        self.variable_button.clicked.connect(self.variables_paciente)
+        # self.ON.setEnabled(True)
+        # self.OFF.setEnabled(False)
+        # self.play_stop_button_.setEnabled(False)
+        # self.variable_button_.toggle()
+        # self.ON.clicked.connect(self.btn_on)
+        # self.OFF.clicked.connect(self.btn_off)
+        # self.play_stop_button_.clicked.connect(self.play_stop)
+        # self.datos_button_.clicked.connect(self.datos_paciente)
+        # self.variable_button_.clicked.connect(self.variables_paciente)
                         
         self.on_off = 0
         
@@ -72,9 +72,9 @@ class MyApp(Datos_paciente_):
         self.y2 = [randint(0,100) for _ in range(100)]  # 100 data points
         self.y3 = [randint(0,100) for _ in range(100)]  # 100 data points
 
-        self.graphWidget_1.setBackground('w')    
-        self.graphWidget_2.setBackground('w')
-        self.graphWidget_3.setBackground('w')
+        self.graphWidget_7.setBackground('w')    
+        self.graphWidget_8.setBackground('w')
+        self.graphWidget_9.setBackground('w')
         
     def play_stop(self):
         
@@ -148,7 +148,7 @@ class MyApp(Datos_paciente_):
         self.timer.stop()     
         
     def close_window(self):
-        self.close()
+        return self.close()
     
 class Pop_up(QMainWindow):
     def __init__(self, parent=None):
