@@ -2075,7 +2075,7 @@ color: rgb(255, 255, 255);
         <string>Variables</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_12">
-        <item row="0" column="0">
+        <item row="0" column="1">
          <layout class="QVBoxLayout" name="verticalLayout_11">
           <item>
            <widget class="QFrame" name="frame_8">
@@ -2403,6 +2403,20 @@ color: rgb(255, 255, 255);
                      <bold>true</bold>
                     </font>
                    </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton{
+	color: rgb(247, 247, 247);
+
+	
+}
+
+QPushButton:hover {background-color: rgb(51, 209, 122);}
+
+QPushButton:hover:!pressed
+{
+  border: 1.5px solid black;
+}</string>
+                   </property>
                    <property name="text">
                     <string>Ppeak</string>
                    </property>
@@ -2454,7 +2468,7 @@ color: rgb(255, 255, 255);
                </widget>
               </item>
               <item>
-               <widget class="QFrame" name="frame_22">
+               <widget class="QFrame" name="frame_36">
                 <property name="maximumSize">
                  <size>
                   <width>170</width>
@@ -2493,6 +2507,20 @@ color: rgb(255, 255, 255);
                      <weight>75</weight>
                      <bold>true</bold>
                     </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton{
+	color: rgb(247, 247, 247);
+
+	
+}
+
+QPushButton:hover {background-color: rgb(51, 209, 122);}
+
+QPushButton:hover:!pressed
+{
+  border: 1.5px solid black;
+}</string>
                    </property>
                    <property name="text">
                     <string>Ppeak</string>
@@ -2545,7 +2573,7 @@ color: rgb(255, 255, 255);
                </widget>
               </item>
               <item>
-               <widget class="QFrame" name="frame_23">
+               <widget class="QFrame" name="frame_37">
                 <property name="maximumSize">
                  <size>
                   <width>170</width>
@@ -2584,6 +2612,20 @@ color: rgb(255, 255, 255);
                      <weight>75</weight>
                      <bold>true</bold>
                     </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton{
+	color: rgb(247, 247, 247);
+
+	
+}
+
+QPushButton:hover {background-color: rgb(51, 209, 122);}
+
+QPushButton:hover:!pressed
+{
+  border: 1.5px solid black;
+}</string>
                    </property>
                    <property name="text">
                     <string>Ppeak</string>
@@ -2636,7 +2678,7 @@ color: rgb(255, 255, 255);
                </widget>
               </item>
               <item>
-               <widget class="QFrame" name="frame_19">
+               <widget class="QFrame" name="frame_23">
                 <property name="maximumSize">
                  <size>
                   <width>170</width>
@@ -2661,9 +2703,9 @@ color: rgb(255, 255, 255);
                 <property name="midLineWidth">
                  <number>-8</number>
                 </property>
-                <layout class="QGridLayout" name="gridLayout_7">
+                <layout class="QGridLayout" name="gridLayout_26">
                  <item row="0" column="0">
-                  <widget class="QPushButton" name="pushButton">
+                  <widget class="QPushButton" name="pushButton_18">
                    <property name="minimumSize">
                     <size>
                      <width>60</width>
@@ -2676,18 +2718,32 @@ color: rgb(255, 255, 255);
                      <bold>true</bold>
                     </font>
                    </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton{
+	color: rgb(247, 247, 247);
+
+	
+}
+
+QPushButton:hover {background-color: rgb(51, 209, 122);}
+
+QPushButton:hover:!pressed
+{
+  border: 1.5px solid black;
+}</string>
+                   </property>
                    <property name="text">
                     <string>Ppeak</string>
                    </property>
                   </widget>
                  </item>
                  <item row="0" column="1">
-                  <layout class="QVBoxLayout" name="verticalLayout_18">
+                  <layout class="QVBoxLayout" name="verticalLayout_56">
                    <property name="spacing">
                     <number>0</number>
                    </property>
                    <item>
-                    <widget class="QLabel" name="Ppeak_label">
+                    <widget class="QLabel" name="Ppeak_label_33">
                      <property name="font">
                       <font>
                        <pointsize>38</pointsize>
@@ -2707,7 +2763,7 @@ color: rgb(255, 255, 255);
                     </widget>
                    </item>
                    <item>
-                    <widget class="QLabel" name="label_45">
+                    <widget class="QLabel" name="label_62">
                      <property name="font">
                       <font>
                        <pointsize>9</pointsize>
@@ -2729,7 +2785,7 @@ color: rgb(255, 255, 255);
              </layout>
             </item>
             <item>
-             <layout class="QVBoxLayout" name="verticalLayout_52">
+             <layout class="QVBoxLayout" name="verticalLayout_13">
               <property name="spacing">
                <number>5</number>
               </property>
@@ -2740,7 +2796,7 @@ color: rgb(255, 255, 255);
                <number>5</number>
               </property>
               <item>
-               <widget class="QFrame" name="frame_48">
+               <widget class="QFrame" name="frame_41">
                 <property name="maximumSize">
                  <size>
                   <width>170</width>
@@ -2765,9 +2821,9 @@ color: rgb(255, 255, 255);
                 <property name="midLineWidth">
                  <number>-8</number>
                 </property>
-                <layout class="QGridLayout" name="gridLayout_61">
+                <layout class="QGridLayout" name="gridLayout_52">
                  <item row="0" column="0">
-                  <widget class="QPushButton" name="pushButton_33">
+                  <widget class="QPushButton" name="pushButton_24">
                    <property name="minimumSize">
                     <size>
                      <width>60</width>
@@ -2780,18 +2836,32 @@ color: rgb(255, 255, 255);
                      <bold>true</bold>
                     </font>
                    </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton{
+	color: rgb(247, 247, 247);
+
+	
+}
+
+QPushButton:hover {background-color: rgb(51, 209, 122);}
+
+QPushButton:hover:!pressed
+{
+  border: 1.5px solid black;
+}</string>
+                   </property>
                    <property name="text">
                     <string>Ppeak</string>
                    </property>
                   </widget>
                  </item>
                  <item row="0" column="1">
-                  <layout class="QVBoxLayout" name="verticalLayout_69">
+                  <layout class="QVBoxLayout" name="verticalLayout_62">
                    <property name="spacing">
                     <number>0</number>
                    </property>
                    <item>
-                    <widget class="QLabel" name="Ppeak_label_48">
+                    <widget class="QLabel" name="Ppeak_label_39">
                      <property name="font">
                       <font>
                        <pointsize>38</pointsize>
@@ -2811,7 +2881,7 @@ color: rgb(255, 255, 255);
                     </widget>
                    </item>
                    <item>
-                    <widget class="QLabel" name="label_77">
+                    <widget class="QLabel" name="label_68">
                      <property name="font">
                       <font>
                        <pointsize>9</pointsize>
@@ -2831,670 +2901,7 @@ color: rgb(255, 255, 255);
                </widget>
               </item>
               <item>
-               <widget class="QFrame" name="frame_49">
-                <property name="maximumSize">
-                 <size>
-                  <width>170</width>
-                  <height>120</height>
-                 </size>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">border-radius: 15px;
-background-color: rgb(129, 61, 156);
-color: rgb(255, 255, 255);
-</string>
-                </property>
-                <property name="frameShape">
-                 <enum>QFrame::Box</enum>
-                </property>
-                <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
-                </property>
-                <property name="lineWidth">
-                 <number>-17</number>
-                </property>
-                <property name="midLineWidth">
-                 <number>-8</number>
-                </property>
-                <layout class="QGridLayout" name="gridLayout_62">
-                 <item row="0" column="0">
-                  <widget class="QPushButton" name="pushButton_34">
-                   <property name="minimumSize">
-                    <size>
-                     <width>60</width>
-                     <height>90</height>
-                    </size>
-                   </property>
-                   <property name="font">
-                    <font>
-                     <weight>75</weight>
-                     <bold>true</bold>
-                    </font>
-                   </property>
-                   <property name="text">
-                    <string>Ppeak</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="0" column="1">
-                  <layout class="QVBoxLayout" name="verticalLayout_70">
-                   <property name="spacing">
-                    <number>0</number>
-                   </property>
-                   <item>
-                    <widget class="QLabel" name="Ppeak_label_49">
-                     <property name="font">
-                      <font>
-                       <pointsize>38</pointsize>
-                       <weight>75</weight>
-                       <bold>true</bold>
-                      </font>
-                     </property>
-                     <property name="lineWidth">
-                      <number>1</number>
-                     </property>
-                     <property name="text">
-                      <string>28</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QLabel" name="label_78">
-                     <property name="font">
-                      <font>
-                       <pointsize>9</pointsize>
-                      </font>
-                     </property>
-                     <property name="text">
-                      <string>cmH20</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-              <item>
-               <widget class="QFrame" name="frame_50">
-                <property name="maximumSize">
-                 <size>
-                  <width>170</width>
-                  <height>120</height>
-                 </size>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">border-radius: 15px;
-background-color: rgb(129, 61, 156);
-color: rgb(255, 255, 255);
-</string>
-                </property>
-                <property name="frameShape">
-                 <enum>QFrame::Box</enum>
-                </property>
-                <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
-                </property>
-                <property name="lineWidth">
-                 <number>-17</number>
-                </property>
-                <property name="midLineWidth">
-                 <number>-8</number>
-                </property>
-                <layout class="QGridLayout" name="gridLayout_63">
-                 <item row="0" column="0">
-                  <widget class="QPushButton" name="pushButton_35">
-                   <property name="minimumSize">
-                    <size>
-                     <width>60</width>
-                     <height>90</height>
-                    </size>
-                   </property>
-                   <property name="font">
-                    <font>
-                     <weight>75</weight>
-                     <bold>true</bold>
-                    </font>
-                   </property>
-                   <property name="text">
-                    <string>Ppeak</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="0" column="1">
-                  <layout class="QVBoxLayout" name="verticalLayout_71">
-                   <property name="spacing">
-                    <number>0</number>
-                   </property>
-                   <item>
-                    <widget class="QLabel" name="Ppeak_label_50">
-                     <property name="font">
-                      <font>
-                       <pointsize>38</pointsize>
-                       <weight>75</weight>
-                       <bold>true</bold>
-                      </font>
-                     </property>
-                     <property name="lineWidth">
-                      <number>1</number>
-                     </property>
-                     <property name="text">
-                      <string>28</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QLabel" name="label_79">
-                     <property name="font">
-                      <font>
-                       <pointsize>9</pointsize>
-                      </font>
-                     </property>
-                     <property name="text">
-                      <string>cmH20</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-              <item>
-               <widget class="QFrame" name="frame_51">
-                <property name="maximumSize">
-                 <size>
-                  <width>170</width>
-                  <height>120</height>
-                 </size>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">border-radius: 15px;
-background-color: rgb(129, 61, 156);
-color: rgb(255, 255, 255);
-</string>
-                </property>
-                <property name="frameShape">
-                 <enum>QFrame::Box</enum>
-                </property>
-                <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
-                </property>
-                <property name="lineWidth">
-                 <number>-17</number>
-                </property>
-                <property name="midLineWidth">
-                 <number>-8</number>
-                </property>
-                <layout class="QGridLayout" name="gridLayout_64">
-                 <item row="0" column="0">
-                  <widget class="QPushButton" name="pushButton_36">
-                   <property name="minimumSize">
-                    <size>
-                     <width>60</width>
-                     <height>90</height>
-                    </size>
-                   </property>
-                   <property name="font">
-                    <font>
-                     <weight>75</weight>
-                     <bold>true</bold>
-                    </font>
-                   </property>
-                   <property name="text">
-                    <string>Ppeak</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="0" column="1">
-                  <layout class="QVBoxLayout" name="verticalLayout_53">
-                   <property name="spacing">
-                    <number>0</number>
-                   </property>
-                   <item>
-                    <widget class="QLabel" name="Ppeak_label_51">
-                     <property name="font">
-                      <font>
-                       <pointsize>38</pointsize>
-                       <weight>75</weight>
-                       <bold>true</bold>
-                      </font>
-                     </property>
-                     <property name="lineWidth">
-                      <number>1</number>
-                     </property>
-                     <property name="text">
-                      <string>28</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QLabel" name="label_80">
-                     <property name="font">
-                      <font>
-                       <pointsize>9</pointsize>
-                      </font>
-                     </property>
-                     <property name="text">
-                      <string>cmH20</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-             </layout>
-            </item>
-            <item>
-             <layout class="QVBoxLayout" name="verticalLayout_17">
-              <property name="spacing">
-               <number>5</number>
-              </property>
-              <property name="leftMargin">
-               <number>5</number>
-              </property>
-              <property name="rightMargin">
-               <number>5</number>
-              </property>
-              <item>
-               <widget class="QFrame" name="frame_44">
-                <property name="maximumSize">
-                 <size>
-                  <width>170</width>
-                  <height>120</height>
-                 </size>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">border-radius: 15px;
-background-color: rgb(129, 61, 156);
-color: rgb(255, 255, 255);
-</string>
-                </property>
-                <property name="frameShape">
-                 <enum>QFrame::Box</enum>
-                </property>
-                <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
-                </property>
-                <property name="lineWidth">
-                 <number>-17</number>
-                </property>
-                <property name="midLineWidth">
-                 <number>-8</number>
-                </property>
-                <layout class="QGridLayout" name="gridLayout_57">
-                 <item row="0" column="0">
-                  <widget class="QPushButton" name="pushButton_29">
-                   <property name="minimumSize">
-                    <size>
-                     <width>60</width>
-                     <height>90</height>
-                    </size>
-                   </property>
-                   <property name="font">
-                    <font>
-                     <weight>75</weight>
-                     <bold>true</bold>
-                    </font>
-                   </property>
-                   <property name="text">
-                    <string>Ppeak</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="0" column="1">
-                  <layout class="QVBoxLayout" name="verticalLayout_66">
-                   <property name="spacing">
-                    <number>0</number>
-                   </property>
-                   <item>
-                    <widget class="QLabel" name="Ppeak_label_44">
-                     <property name="font">
-                      <font>
-                       <pointsize>38</pointsize>
-                       <weight>75</weight>
-                       <bold>true</bold>
-                      </font>
-                     </property>
-                     <property name="lineWidth">
-                      <number>1</number>
-                     </property>
-                     <property name="text">
-                      <string>28</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QLabel" name="label_73">
-                     <property name="font">
-                      <font>
-                       <pointsize>9</pointsize>
-                      </font>
-                     </property>
-                     <property name="text">
-                      <string>cmH20</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-              <item>
-               <widget class="QFrame" name="frame_45">
-                <property name="maximumSize">
-                 <size>
-                  <width>170</width>
-                  <height>120</height>
-                 </size>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">border-radius: 15px;
-background-color: rgb(129, 61, 156);
-color: rgb(255, 255, 255);
-</string>
-                </property>
-                <property name="frameShape">
-                 <enum>QFrame::Box</enum>
-                </property>
-                <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
-                </property>
-                <property name="lineWidth">
-                 <number>-17</number>
-                </property>
-                <property name="midLineWidth">
-                 <number>-8</number>
-                </property>
-                <layout class="QGridLayout" name="gridLayout_58">
-                 <item row="0" column="0">
-                  <widget class="QPushButton" name="pushButton_30">
-                   <property name="minimumSize">
-                    <size>
-                     <width>60</width>
-                     <height>90</height>
-                    </size>
-                   </property>
-                   <property name="font">
-                    <font>
-                     <weight>75</weight>
-                     <bold>true</bold>
-                    </font>
-                   </property>
-                   <property name="text">
-                    <string>Ppeak</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="0" column="1">
-                  <layout class="QVBoxLayout" name="verticalLayout_67">
-                   <property name="spacing">
-                    <number>0</number>
-                   </property>
-                   <item>
-                    <widget class="QLabel" name="Ppeak_label_45">
-                     <property name="font">
-                      <font>
-                       <pointsize>38</pointsize>
-                       <weight>75</weight>
-                       <bold>true</bold>
-                      </font>
-                     </property>
-                     <property name="lineWidth">
-                      <number>1</number>
-                     </property>
-                     <property name="text">
-                      <string>28</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QLabel" name="label_74">
-                     <property name="font">
-                      <font>
-                       <pointsize>9</pointsize>
-                      </font>
-                     </property>
-                     <property name="text">
-                      <string>cmH20</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-              <item>
-               <widget class="QFrame" name="frame_46">
-                <property name="maximumSize">
-                 <size>
-                  <width>170</width>
-                  <height>120</height>
-                 </size>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">border-radius: 15px;
-background-color: rgb(129, 61, 156);
-color: rgb(255, 255, 255);
-</string>
-                </property>
-                <property name="frameShape">
-                 <enum>QFrame::Box</enum>
-                </property>
-                <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
-                </property>
-                <property name="lineWidth">
-                 <number>-17</number>
-                </property>
-                <property name="midLineWidth">
-                 <number>-8</number>
-                </property>
-                <layout class="QGridLayout" name="gridLayout_59">
-                 <item row="0" column="0">
-                  <widget class="QPushButton" name="pushButton_31">
-                   <property name="minimumSize">
-                    <size>
-                     <width>60</width>
-                     <height>90</height>
-                    </size>
-                   </property>
-                   <property name="font">
-                    <font>
-                     <weight>75</weight>
-                     <bold>true</bold>
-                    </font>
-                   </property>
-                   <property name="text">
-                    <string>Ppeak</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="0" column="1">
-                  <layout class="QVBoxLayout" name="verticalLayout_68">
-                   <property name="spacing">
-                    <number>0</number>
-                   </property>
-                   <item>
-                    <widget class="QLabel" name="Ppeak_label_46">
-                     <property name="font">
-                      <font>
-                       <pointsize>38</pointsize>
-                       <weight>75</weight>
-                       <bold>true</bold>
-                      </font>
-                     </property>
-                     <property name="lineWidth">
-                      <number>1</number>
-                     </property>
-                     <property name="text">
-                      <string>28</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QLabel" name="label_75">
-                     <property name="font">
-                      <font>
-                       <pointsize>9</pointsize>
-                      </font>
-                     </property>
-                     <property name="text">
-                      <string>cmH20</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-              <item>
-               <widget class="QFrame" name="frame_47">
-                <property name="maximumSize">
-                 <size>
-                  <width>170</width>
-                  <height>120</height>
-                 </size>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">border-radius: 15px;
-background-color: rgb(129, 61, 156);
-color: rgb(255, 255, 255);
-</string>
-                </property>
-                <property name="frameShape">
-                 <enum>QFrame::Box</enum>
-                </property>
-                <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
-                </property>
-                <property name="lineWidth">
-                 <number>-17</number>
-                </property>
-                <property name="midLineWidth">
-                 <number>-8</number>
-                </property>
-                <layout class="QGridLayout" name="gridLayout_60">
-                 <item row="0" column="0">
-                  <widget class="QPushButton" name="pushButton_32">
-                   <property name="minimumSize">
-                    <size>
-                     <width>60</width>
-                     <height>90</height>
-                    </size>
-                   </property>
-                   <property name="font">
-                    <font>
-                     <weight>75</weight>
-                     <bold>true</bold>
-                    </font>
-                   </property>
-                   <property name="text">
-                    <string>Ppeak</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="0" column="1">
-                  <layout class="QVBoxLayout" name="verticalLayout_51">
-                   <property name="spacing">
-                    <number>0</number>
-                   </property>
-                   <item>
-                    <widget class="QLabel" name="Ppeak_label_47">
-                     <property name="font">
-                      <font>
-                       <pointsize>38</pointsize>
-                       <weight>75</weight>
-                       <bold>true</bold>
-                      </font>
-                     </property>
-                     <property name="lineWidth">
-                      <number>1</number>
-                     </property>
-                     <property name="text">
-                      <string>28</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QLabel" name="label_76">
-                     <property name="font">
-                      <font>
-                       <pointsize>9</pointsize>
-                      </font>
-                     </property>
-                     <property name="text">
-                      <string>cmH20</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-             </layout>
-            </item>
-            <item>
-             <layout class="QVBoxLayout" name="verticalLayout_16">
-              <property name="spacing">
-               <number>5</number>
-              </property>
-              <property name="leftMargin">
-               <number>5</number>
-              </property>
-              <property name="rightMargin">
-               <number>5</number>
-              </property>
-              <item>
-               <widget class="QFrame" name="frame_40">
+               <widget class="QFrame" name="frame_42">
                 <property name="maximumSize">
                  <size>
                   <width>170</width>
@@ -3533,6 +2940,20 @@ color: rgb(255, 255, 255);
                      <weight>75</weight>
                      <bold>true</bold>
                     </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton{
+	color: rgb(247, 247, 247);
+
+	
+}
+
+QPushButton:hover {background-color: rgb(51, 209, 122);}
+
+QPushButton:hover:!pressed
+{
+  border: 1.5px solid black;
+}</string>
                    </property>
                    <property name="text">
                     <string>Ppeak</string>
@@ -3585,7 +3006,7 @@ color: rgb(255, 255, 255);
                </widget>
               </item>
               <item>
-               <widget class="QFrame" name="frame_41">
+               <widget class="QFrame" name="frame_43">
                 <property name="maximumSize">
                  <size>
                   <width>170</width>
@@ -3624,6 +3045,20 @@ color: rgb(255, 255, 255);
                      <weight>75</weight>
                      <bold>true</bold>
                     </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton{
+	color: rgb(247, 247, 247);
+
+	
+}
+
+QPushButton:hover {background-color: rgb(51, 209, 122);}
+
+QPushButton:hover:!pressed
+{
+  border: 1.5px solid black;
+}</string>
                    </property>
                    <property name="text">
                     <string>Ppeak</string>
@@ -3676,7 +3111,7 @@ color: rgb(255, 255, 255);
                </widget>
               </item>
               <item>
-               <widget class="QFrame" name="frame_42">
+               <widget class="QFrame" name="frame_44">
                 <property name="maximumSize">
                  <size>
                   <width>170</width>
@@ -3715,6 +3150,20 @@ color: rgb(255, 255, 255);
                      <weight>75</weight>
                      <bold>true</bold>
                     </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton{
+	color: rgb(247, 247, 247);
+
+	
+}
+
+QPushButton:hover {background-color: rgb(51, 209, 122);}
+
+QPushButton:hover:!pressed
+{
+  border: 1.5px solid black;
+}</string>
                    </property>
                    <property name="text">
                     <string>Ppeak</string>
@@ -3766,8 +3215,21 @@ color: rgb(255, 255, 255);
                 </layout>
                </widget>
               </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_15">
+              <property name="spacing">
+               <number>5</number>
+              </property>
+              <property name="leftMargin">
+               <number>5</number>
+              </property>
+              <property name="rightMargin">
+               <number>5</number>
+              </property>
               <item>
-               <widget class="QFrame" name="frame_43">
+               <widget class="QFrame" name="frame_45">
                 <property name="maximumSize">
                  <size>
                   <width>170</width>
@@ -3807,13 +3269,27 @@ color: rgb(255, 255, 255);
                      <bold>true</bold>
                     </font>
                    </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton{
+	color: rgb(247, 247, 247);
+
+	
+}
+
+QPushButton:hover {background-color: rgb(51, 209, 122);}
+
+QPushButton:hover:!pressed
+{
+  border: 1.5px solid black;
+}</string>
+                   </property>
                    <property name="text">
                     <string>Ppeak</string>
                    </property>
                   </widget>
                  </item>
                  <item row="0" column="1">
-                  <layout class="QVBoxLayout" name="verticalLayout_50">
+                  <layout class="QVBoxLayout" name="verticalLayout_66">
                    <property name="spacing">
                     <number>0</number>
                    </property>
@@ -3857,10 +3333,325 @@ color: rgb(255, 255, 255);
                 </layout>
                </widget>
               </item>
+              <item>
+               <widget class="QFrame" name="frame_46">
+                <property name="maximumSize">
+                 <size>
+                  <width>170</width>
+                  <height>120</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">border-radius: 15px;
+background-color: rgb(129, 61, 156);
+color: rgb(255, 255, 255);
+</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::Box</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <property name="lineWidth">
+                 <number>-17</number>
+                </property>
+                <property name="midLineWidth">
+                 <number>-8</number>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_57">
+                 <item row="0" column="0">
+                  <widget class="QPushButton" name="pushButton_29">
+                   <property name="minimumSize">
+                    <size>
+                     <width>60</width>
+                     <height>90</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton{
+	color: rgb(247, 247, 247);
+
+	
+}
+
+QPushButton:hover {background-color: rgb(51, 209, 122);}
+
+QPushButton:hover:!pressed
+{
+  border: 1.5px solid black;
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>Ppeak</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="1">
+                  <layout class="QVBoxLayout" name="verticalLayout_67">
+                   <property name="spacing">
+                    <number>0</number>
+                   </property>
+                   <item>
+                    <widget class="QLabel" name="Ppeak_label_44">
+                     <property name="font">
+                      <font>
+                       <pointsize>38</pointsize>
+                       <weight>75</weight>
+                       <bold>true</bold>
+                      </font>
+                     </property>
+                     <property name="lineWidth">
+                      <number>1</number>
+                     </property>
+                     <property name="text">
+                      <string>28</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="label_73">
+                     <property name="font">
+                      <font>
+                       <pointsize>9</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>cmH20</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="frame_47">
+                <property name="maximumSize">
+                 <size>
+                  <width>170</width>
+                  <height>120</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">border-radius: 15px;
+background-color: rgb(129, 61, 156);
+color: rgb(255, 255, 255);
+</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::Box</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <property name="lineWidth">
+                 <number>-17</number>
+                </property>
+                <property name="midLineWidth">
+                 <number>-8</number>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_58">
+                 <item row="0" column="0">
+                  <widget class="QPushButton" name="pushButton_30">
+                   <property name="minimumSize">
+                    <size>
+                     <width>60</width>
+                     <height>90</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton{
+	color: rgb(247, 247, 247);
+
+	
+}
+
+QPushButton:hover {background-color: rgb(51, 209, 122);}
+
+QPushButton:hover:!pressed
+{
+  border: 1.5px solid black;
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>Ppeak</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="1">
+                  <layout class="QVBoxLayout" name="verticalLayout_68">
+                   <property name="spacing">
+                    <number>0</number>
+                   </property>
+                   <item>
+                    <widget class="QLabel" name="Ppeak_label_45">
+                     <property name="font">
+                      <font>
+                       <pointsize>38</pointsize>
+                       <weight>75</weight>
+                       <bold>true</bold>
+                      </font>
+                     </property>
+                     <property name="lineWidth">
+                      <number>1</number>
+                     </property>
+                     <property name="text">
+                      <string>28</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="label_74">
+                     <property name="font">
+                      <font>
+                       <pointsize>9</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>cmH20</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="frame_48">
+                <property name="maximumSize">
+                 <size>
+                  <width>170</width>
+                  <height>120</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">border-radius: 15px;
+background-color: rgb(129, 61, 156);
+color: rgb(255, 255, 255);
+</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::Box</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <property name="lineWidth">
+                 <number>-17</number>
+                </property>
+                <property name="midLineWidth">
+                 <number>-8</number>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_59">
+                 <item row="0" column="0">
+                  <widget class="QPushButton" name="pushButton_31">
+                   <property name="minimumSize">
+                    <size>
+                     <width>60</width>
+                     <height>90</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton{
+	color: rgb(247, 247, 247);
+
+	
+}
+
+QPushButton:hover {background-color: rgb(51, 209, 122);}
+
+QPushButton:hover:!pressed
+{
+  border: 1.5px solid black;
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>Ppeak</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="1">
+                  <layout class="QVBoxLayout" name="verticalLayout_69">
+                   <property name="spacing">
+                    <number>0</number>
+                   </property>
+                   <item>
+                    <widget class="QLabel" name="Ppeak_label_46">
+                     <property name="font">
+                      <font>
+                       <pointsize>38</pointsize>
+                       <weight>75</weight>
+                       <bold>true</bold>
+                      </font>
+                     </property>
+                     <property name="lineWidth">
+                      <number>1</number>
+                     </property>
+                     <property name="text">
+                      <string>28</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="label_75">
+                     <property name="font">
+                      <font>
+                       <pointsize>9</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>cmH20</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </item>
              </layout>
             </item>
             <item>
-             <layout class="QVBoxLayout" name="verticalLayout_15">
+             <layout class="QVBoxLayout" name="verticalLayout_52">
               <property name="spacing">
                <number>5</number>
               </property>
@@ -3871,189 +3662,7 @@ color: rgb(255, 255, 255);
                <number>5</number>
               </property>
               <item>
-               <widget class="QFrame" name="frame_36">
-                <property name="maximumSize">
-                 <size>
-                  <width>170</width>
-                  <height>120</height>
-                 </size>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">border-radius: 15px;
-background-color: rgb(129, 61, 156);
-color: rgb(255, 255, 255);
-</string>
-                </property>
-                <property name="frameShape">
-                 <enum>QFrame::Box</enum>
-                </property>
-                <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
-                </property>
-                <property name="lineWidth">
-                 <number>-17</number>
-                </property>
-                <property name="midLineWidth">
-                 <number>-8</number>
-                </property>
-                <layout class="QGridLayout" name="gridLayout_46">
-                 <item row="0" column="0">
-                  <widget class="QPushButton" name="pushButton_21">
-                   <property name="minimumSize">
-                    <size>
-                     <width>60</width>
-                     <height>90</height>
-                    </size>
-                   </property>
-                   <property name="font">
-                    <font>
-                     <weight>75</weight>
-                     <bold>true</bold>
-                    </font>
-                   </property>
-                   <property name="text">
-                    <string>Ppeak</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="0" column="1">
-                  <layout class="QVBoxLayout" name="verticalLayout_59">
-                   <property name="spacing">
-                    <number>0</number>
-                   </property>
-                   <item>
-                    <widget class="QLabel" name="Ppeak_label_36">
-                     <property name="font">
-                      <font>
-                       <pointsize>38</pointsize>
-                       <weight>75</weight>
-                       <bold>true</bold>
-                      </font>
-                     </property>
-                     <property name="lineWidth">
-                      <number>1</number>
-                     </property>
-                     <property name="text">
-                      <string>28</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QLabel" name="label_65">
-                     <property name="font">
-                      <font>
-                       <pointsize>9</pointsize>
-                      </font>
-                     </property>
-                     <property name="text">
-                      <string>cmH20</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-              <item>
-               <widget class="QFrame" name="frame_37">
-                <property name="maximumSize">
-                 <size>
-                  <width>170</width>
-                  <height>120</height>
-                 </size>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">border-radius: 15px;
-background-color: rgb(129, 61, 156);
-color: rgb(255, 255, 255);
-</string>
-                </property>
-                <property name="frameShape">
-                 <enum>QFrame::Box</enum>
-                </property>
-                <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
-                </property>
-                <property name="lineWidth">
-                 <number>-17</number>
-                </property>
-                <property name="midLineWidth">
-                 <number>-8</number>
-                </property>
-                <layout class="QGridLayout" name="gridLayout_50">
-                 <item row="0" column="0">
-                  <widget class="QPushButton" name="pushButton_22">
-                   <property name="minimumSize">
-                    <size>
-                     <width>60</width>
-                     <height>90</height>
-                    </size>
-                   </property>
-                   <property name="font">
-                    <font>
-                     <weight>75</weight>
-                     <bold>true</bold>
-                    </font>
-                   </property>
-                   <property name="text">
-                    <string>Ppeak</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="0" column="1">
-                  <layout class="QVBoxLayout" name="verticalLayout_60">
-                   <property name="spacing">
-                    <number>0</number>
-                   </property>
-                   <item>
-                    <widget class="QLabel" name="Ppeak_label_37">
-                     <property name="font">
-                      <font>
-                       <pointsize>38</pointsize>
-                       <weight>75</weight>
-                       <bold>true</bold>
-                      </font>
-                     </property>
-                     <property name="lineWidth">
-                      <number>1</number>
-                     </property>
-                     <property name="text">
-                      <string>28</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QLabel" name="label_66">
-                     <property name="font">
-                      <font>
-                       <pointsize>9</pointsize>
-                      </font>
-                     </property>
-                     <property name="text">
-                      <string>cmH20</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-              <item>
-               <widget class="QFrame" name="frame_38">
+               <widget class="QFrame" name="frame_40">
                 <property name="maximumSize">
                  <size>
                   <width>170</width>
@@ -4092,6 +3701,20 @@ color: rgb(255, 255, 255);
                      <weight>75</weight>
                      <bold>true</bold>
                     </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton{
+	color: rgb(247, 247, 247);
+
+	
+}
+
+QPushButton:hover {background-color: rgb(51, 209, 122);}
+
+QPushButton:hover:!pressed
+{
+  border: 1.5px solid black;
+}</string>
                    </property>
                    <property name="text">
                     <string>Ppeak</string>
@@ -4169,9 +3792,9 @@ color: rgb(255, 255, 255);
                 <property name="midLineWidth">
                  <number>-8</number>
                 </property>
-                <layout class="QGridLayout" name="gridLayout_52">
+                <layout class="QGridLayout" name="gridLayout_50">
                  <item row="0" column="0">
-                  <widget class="QPushButton" name="pushButton_24">
+                  <widget class="QPushButton" name="pushButton_22">
                    <property name="minimumSize">
                     <size>
                      <width>60</width>
@@ -4184,18 +3807,32 @@ color: rgb(255, 255, 255);
                      <bold>true</bold>
                     </font>
                    </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton{
+	color: rgb(247, 247, 247);
+
+	
+}
+
+QPushButton:hover {background-color: rgb(51, 209, 122);}
+
+QPushButton:hover:!pressed
+{
+  border: 1.5px solid black;
+}</string>
+                   </property>
                    <property name="text">
                     <string>Ppeak</string>
                    </property>
                   </widget>
                  </item>
                  <item row="0" column="1">
-                  <layout class="QVBoxLayout" name="verticalLayout_62">
+                  <layout class="QVBoxLayout" name="verticalLayout_60">
                    <property name="spacing">
                     <number>0</number>
                    </property>
                    <item>
-                    <widget class="QLabel" name="Ppeak_label_39">
+                    <widget class="QLabel" name="Ppeak_label_37">
                      <property name="font">
                       <font>
                        <pointsize>38</pointsize>
@@ -4215,7 +3852,217 @@ color: rgb(255, 255, 255);
                     </widget>
                    </item>
                    <item>
-                    <widget class="QLabel" name="label_68">
+                    <widget class="QLabel" name="label_66">
+                     <property name="font">
+                      <font>
+                       <pointsize>9</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>cmH20</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="frame_38">
+                <property name="maximumSize">
+                 <size>
+                  <width>170</width>
+                  <height>120</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">border-radius: 15px;
+background-color: rgb(129, 61, 156);
+color: rgb(255, 255, 255);
+</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::Box</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <property name="lineWidth">
+                 <number>-17</number>
+                </property>
+                <property name="midLineWidth">
+                 <number>-8</number>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_46">
+                 <item row="0" column="0">
+                  <widget class="QPushButton" name="pushButton_21">
+                   <property name="minimumSize">
+                    <size>
+                     <width>60</width>
+                     <height>90</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton{
+	color: rgb(247, 247, 247);
+
+	
+}
+
+QPushButton:hover {background-color: rgb(51, 209, 122);}
+
+QPushButton:hover:!pressed
+{
+  border: 1.5px solid black;
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>Ppeak</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="1">
+                  <layout class="QVBoxLayout" name="verticalLayout_59">
+                   <property name="spacing">
+                    <number>0</number>
+                   </property>
+                   <item>
+                    <widget class="QLabel" name="Ppeak_label_36">
+                     <property name="font">
+                      <font>
+                       <pointsize>38</pointsize>
+                       <weight>75</weight>
+                       <bold>true</bold>
+                      </font>
+                     </property>
+                     <property name="lineWidth">
+                      <number>1</number>
+                     </property>
+                     <property name="text">
+                      <string>28</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="label_65">
+                     <property name="font">
+                      <font>
+                       <pointsize>9</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>cmH20</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="frame_22">
+                <property name="maximumSize">
+                 <size>
+                  <width>170</width>
+                  <height>120</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">border-radius: 15px;
+background-color: rgb(129, 61, 156);
+color: rgb(255, 255, 255);
+</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::Box</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <property name="lineWidth">
+                 <number>-17</number>
+                </property>
+                <property name="midLineWidth">
+                 <number>-8</number>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_25">
+                 <item row="0" column="0">
+                  <widget class="QPushButton" name="pushButton_17">
+                   <property name="minimumSize">
+                    <size>
+                     <width>60</width>
+                     <height>90</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton{
+	color: rgb(247, 247, 247);
+
+	
+}
+
+QPushButton:hover {background-color: rgb(51, 209, 122);}
+
+QPushButton:hover:!pressed
+{
+  border: 1.5px solid black;
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>Ppeak</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="1">
+                  <layout class="QVBoxLayout" name="verticalLayout_55">
+                   <property name="spacing">
+                    <number>0</number>
+                   </property>
+                   <item>
+                    <widget class="QLabel" name="Ppeak_label_32">
+                     <property name="font">
+                      <font>
+                       <pointsize>38</pointsize>
+                       <weight>75</weight>
+                       <bold>true</bold>
+                      </font>
+                     </property>
+                     <property name="lineWidth">
+                      <number>1</number>
+                     </property>
+                     <property name="text">
+                      <string>28</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="label_61">
                      <property name="font">
                       <font>
                        <pointsize>9</pointsize>
@@ -4239,6 +4086,32 @@ color: rgb(255, 255, 255);
            </layout>
           </item>
          </layout>
+        </item>
+        <item row="0" column="2">
+         <spacer name="horizontalSpacer_17">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="0">
+         <spacer name="horizontalSpacer_16">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
         </item>
        </layout>
       </widget>
