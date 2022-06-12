@@ -28,24 +28,21 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
-    <item row="1" column="1">
-     <widget class="QFrame" name="frame_2">
-      <property name="minimumSize">
+    <item row="2" column="1">
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeType">
+       <enum>QSizePolicy::Fixed</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
        <size>
-        <width>0</width>
-        <height>16</height>
+        <width>20</width>
+        <height>30</height>
        </size>
       </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(51, 209, 122);</string>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
-      </property>
-     </widget>
+     </spacer>
     </item>
     <item row="0" column="1">
      <widget class="QTabWidget" name="tabWidget">
@@ -57,7 +54,7 @@
       </property>
       <widget class="QWidget" name="tab_2">
        <attribute name="title">
-        <string>Page</string>
+        <string>Datos</string>
        </attribute>
       </widget>
       <widget class="QWidget" name="tab_3">
@@ -922,7 +919,7 @@ color: rgb(255, 255, 255);
                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;System: Off&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                       </property>
                       <property name="text">
-                       <string>Play/Stop graphs</string>
+                       <string>Play/Stop graficas</string>
                       </property>
                       <property name="alignment">
                        <set>Qt::AlignCenter</set>
@@ -1042,323 +1039,6 @@ QPushButton:hover:!pressed
               <number>0</number>
              </property>
              <layout class="QGridLayout" name="gridLayout_3">
-              <property name="leftMargin">
-               <number>0</number>
-              </property>
-              <property name="topMargin">
-               <number>0</number>
-              </property>
-              <property name="rightMargin">
-               <number>0</number>
-              </property>
-              <property name="bottomMargin">
-               <number>0</number>
-              </property>
-              <property name="horizontalSpacing">
-               <number>0</number>
-              </property>
-              <property name="verticalSpacing">
-               <number>5</number>
-              </property>
-              <item row="4" column="0">
-               <layout class="QVBoxLayout" name="verticalLayout_4">
-                <item>
-                 <widget class="QRadioButton" name="radioButton">
-                  <property name="minimumSize">
-                   <size>
-                    <width>0</width>
-                    <height>25</height>
-                   </size>
-                  </property>
-                  <property name="font">
-                   <font>
-                    <pointsize>15</pointsize>
-                    <weight>75</weight>
-                    <bold>true</bold>
-                   </font>
-                  </property>
-                  <property name="text">
-                   <string>Encendido</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QRadioButton" name="radioButton_2">
-                  <property name="font">
-                   <font>
-                    <pointsize>15</pointsize>
-                    <weight>75</weight>
-                    <bold>true</bold>
-                   </font>
-                  </property>
-                  <property name="text">
-                   <string>Apagado</string>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </item>
-              <item row="1" column="0">
-               <layout class="QVBoxLayout" name="verticalLayout_5">
-                <property name="spacing">
-                 <number>0</number>
-                </property>
-                <item>
-                 <widget class="QLabel" name="label_116">
-                  <property name="minimumSize">
-                   <size>
-                    <width>110</width>
-                    <height>25</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>16777215</width>
-                    <height>25</height>
-                   </size>
-                  </property>
-                  <property name="font">
-                   <font>
-                    <pointsize>10</pointsize>
-                    <weight>75</weight>
-                    <bold>true</bold>
-                   </font>
-                  </property>
-                  <property name="layoutDirection">
-                   <enum>Qt::LeftToRight</enum>
-                  </property>
-                  <property name="text">
-                   <string>6/12/22</string>
-                  </property>
-                  <property name="alignment">
-                   <set>Qt::AlignCenter</set>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <layout class="QHBoxLayout" name="horizontalLayout_2">
-                  <property name="spacing">
-                   <number>7</number>
-                  </property>
-                  <item>
-                   <widget class="QLabel" name="label_117">
-                    <property name="minimumSize">
-                     <size>
-                      <width>58</width>
-                      <height>25</height>
-                     </size>
-                    </property>
-                    <property name="maximumSize">
-                     <size>
-                      <width>16777215</width>
-                      <height>25</height>
-                     </size>
-                    </property>
-                    <property name="font">
-                     <font>
-                      <pointsize>10</pointsize>
-                      <weight>75</weight>
-                      <bold>true</bold>
-                     </font>
-                    </property>
-                    <property name="layoutDirection">
-                     <enum>Qt::LeftToRight</enum>
-                    </property>
-                    <property name="text">
-                     <string>Modo:</string>
-                    </property>
-                    <property name="alignment">
-                     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QLabel" name="label_115">
-                    <property name="minimumSize">
-                     <size>
-                      <width>50</width>
-                      <height>25</height>
-                     </size>
-                    </property>
-                    <property name="maximumSize">
-                     <size>
-                      <width>16777215</width>
-                      <height>25</height>
-                     </size>
-                    </property>
-                    <property name="font">
-                     <font>
-                      <pointsize>10</pointsize>
-                      <weight>75</weight>
-                      <bold>true</bold>
-                     </font>
-                    </property>
-                    <property name="layoutDirection">
-                     <enum>Qt::LeftToRight</enum>
-                    </property>
-                    <property name="text">
-                     <string>VCV</string>
-                    </property>
-                    <property name="alignment">
-                     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </item>
-               </layout>
-              </item>
-              <item row="3" column="0">
-               <layout class="QVBoxLayout" name="verticalLayout_3">
-                <item>
-                 <widget class="QLabel" name="label_119">
-                  <property name="minimumSize">
-                   <size>
-                    <width>110</width>
-                    <height>50</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>132</width>
-                    <height>50</height>
-                   </size>
-                  </property>
-                  <property name="font">
-                   <font>
-                    <pointsize>10</pointsize>
-                    <weight>75</weight>
-                    <bold>true</bold>
-                   </font>
-                  </property>
-                  <property name="layoutDirection">
-                   <enum>Qt::LeftToRight</enum>
-                  </property>
-                  <property name="styleSheet">
-                   <string notr="true">image: url(:/logos/Images/full-battery.jpg);</string>
-                  </property>
-                  <property name="text">
-                   <string/>
-                  </property>
-                  <property name="alignment">
-                   <set>Qt::AlignCenter</set>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QLabel" name="label_121">
-                  <property name="minimumSize">
-                   <size>
-                    <width>110</width>
-                    <height>25</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>16777215</width>
-                    <height>25</height>
-                   </size>
-                  </property>
-                  <property name="font">
-                   <font>
-                    <pointsize>14</pointsize>
-                    <weight>75</weight>
-                    <bold>true</bold>
-                   </font>
-                  </property>
-                  <property name="layoutDirection">
-                   <enum>Qt::LeftToRight</enum>
-                  </property>
-                  <property name="text">
-                   <string>Bateria</string>
-                  </property>
-                  <property name="alignment">
-                   <set>Qt::AlignCenter</set>
-                  </property>
-                  <property name="wordWrap">
-                   <bool>true</bool>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </item>
-              <item row="2" column="0">
-               <layout class="QVBoxLayout" name="verticalLayout_2">
-                <item>
-                 <widget class="QLabel" name="label_118">
-                  <property name="minimumSize">
-                   <size>
-                    <width>120</width>
-                    <height>50</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>16777215</width>
-                    <height>50</height>
-                   </size>
-                  </property>
-                  <property name="font">
-                   <font>
-                    <pointsize>11</pointsize>
-                    <weight>75</weight>
-                    <bold>true</bold>
-                   </font>
-                  </property>
-                  <property name="layoutDirection">
-                   <enum>Qt::LeftToRight</enum>
-                  </property>
-                  <property name="styleSheet">
-                   <string notr="true">image: url(:/logos/Images/electric.jpg);</string>
-                  </property>
-                  <property name="text">
-                   <string/>
-                  </property>
-                  <property name="alignment">
-                   <set>Qt::AlignCenter</set>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QLabel" name="label_122">
-                  <property name="minimumSize">
-                   <size>
-                    <width>110</width>
-                    <height>30</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>16777215</width>
-                    <height>40</height>
-                   </size>
-                  </property>
-                  <property name="font">
-                   <font>
-                    <pointsize>12</pointsize>
-                    <weight>75</weight>
-                    <bold>true</bold>
-                   </font>
-                  </property>
-                  <property name="layoutDirection">
-                   <enum>Qt::LeftToRight</enum>
-                  </property>
-                  <property name="text">
-                   <string>Energia electrica: conectadoo</string>
-                  </property>
-                  <property name="scaledContents">
-                   <bool>true</bool>
-                  </property>
-                  <property name="alignment">
-                   <set>Qt::AlignCenter</set>
-                  </property>
-                  <property name="wordWrap">
-                   <bool>true</bool>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </item>
               <item row="0" column="0">
                <widget class="QFrame" name="frame_28">
                 <property name="minimumSize">
@@ -1457,6 +1137,305 @@ color: rgb(255, 255, 255);
                 </layout>
                </widget>
               </item>
+              <item row="1" column="0">
+               <layout class="QVBoxLayout" name="verticalLayout_5">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="label_116">
+                  <property name="minimumSize">
+                   <size>
+                    <width>110</width>
+                    <height>25</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>25</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>14</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="layoutDirection">
+                   <enum>Qt::LeftToRight</enum>
+                  </property>
+                  <property name="text">
+                   <string>6/12/22</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_2">
+                  <property name="spacing">
+                   <number>7</number>
+                  </property>
+                  <item>
+                   <widget class="QLabel" name="label_117">
+                    <property name="minimumSize">
+                     <size>
+                      <width>58</width>
+                      <height>25</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>25</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <pointsize>14</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="layoutDirection">
+                     <enum>Qt::LeftToRight</enum>
+                    </property>
+                    <property name="text">
+                     <string>Modo:</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="label_115">
+                    <property name="minimumSize">
+                     <size>
+                      <width>50</width>
+                      <height>25</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>25</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <pointsize>14</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="layoutDirection">
+                     <enum>Qt::LeftToRight</enum>
+                    </property>
+                    <property name="text">
+                     <string>VCV</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </item>
+              <item row="2" column="0">
+               <layout class="QVBoxLayout" name="verticalLayout_2">
+                <item>
+                 <widget class="QLabel" name="label_118">
+                  <property name="minimumSize">
+                   <size>
+                    <width>120</width>
+                    <height>50</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>50</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>11</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="layoutDirection">
+                   <enum>Qt::LeftToRight</enum>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">image: url(:/logos/Images/electric.jpg);</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_122">
+                  <property name="minimumSize">
+                   <size>
+                    <width>110</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="layoutDirection">
+                   <enum>Qt::LeftToRight</enum>
+                  </property>
+                  <property name="text">
+                   <string>Energia electrica: conectadoo</string>
+                  </property>
+                  <property name="scaledContents">
+                   <bool>true</bool>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                  <property name="wordWrap">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item row="3" column="0">
+               <layout class="QVBoxLayout" name="verticalLayout_3">
+                <item>
+                 <widget class="QLabel" name="label_119">
+                  <property name="minimumSize">
+                   <size>
+                    <width>110</width>
+                    <height>50</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>132</width>
+                    <height>50</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="layoutDirection">
+                   <enum>Qt::LeftToRight</enum>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">image: url(:/logos/Images/full-battery.jpg);</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_121">
+                  <property name="minimumSize">
+                   <size>
+                    <width>110</width>
+                    <height>25</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>25</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>14</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="layoutDirection">
+                   <enum>Qt::LeftToRight</enum>
+                  </property>
+                  <property name="text">
+                   <string>Bateria</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                  <property name="wordWrap">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item row="4" column="0">
+               <layout class="QVBoxLayout" name="verticalLayout_4">
+                <item>
+                 <widget class="QRadioButton" name="radioButton">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>25</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>15</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Encendido</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QRadioButton" name="radioButton_2">
+                  <property name="font">
+                   <font>
+                    <pointsize>15</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Apagado</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
              </layout>
             </widget>
            </item>
@@ -1467,7 +1446,7 @@ color: rgb(255, 255, 255);
       </widget>
       <widget class="QWidget" name="tab_4">
        <attribute name="title">
-        <string>Tab 2</string>
+        <string>Variables</string>
        </attribute>
       </widget>
       <widget class="QWidget" name="tab">
@@ -1477,21 +1456,15 @@ color: rgb(255, 255, 255);
       </widget>
      </widget>
     </item>
-    <item row="2" column="1">
-     <spacer name="verticalSpacer">
-      <property name="orientation">
-       <enum>Qt::Vertical</enum>
+    <item row="1" column="1">
+     <widget class="QLabel" name="label">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(51, 209, 122);</string>
       </property>
-      <property name="sizeType">
-       <enum>QSizePolicy::Fixed</enum>
+      <property name="text">
+       <string/>
       </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>20</width>
-        <height>30</height>
-       </size>
-      </property>
-     </spacer>
+     </widget>
     </item>
    </layout>
   </widget>
