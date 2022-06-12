@@ -1264,6 +1264,9 @@ color: rgb(255, 255, 255);
               </item>
               <item row="2" column="0">
                <layout class="QVBoxLayout" name="verticalLayout_2">
+                <property name="spacing">
+                 <number>15</number>
+                </property>
                 <item>
                  <widget class="QLabel" name="label_118">
                   <property name="minimumSize">
@@ -1434,7 +1437,7 @@ color: rgb(255, 255, 255);
                    </font>
                   </property>
                   <property name="styleSheet">
-                   <string notr="true">QRadioButton::indicator { width: 30px; height: 30px;}</string>
+                   <string notr="true">QRadioButton::indicator { width: 40px; height: 40px;}</string>
                   </property>
                   <property name="text">
                    <string>Encendido</string>
@@ -1457,7 +1460,7 @@ color: rgb(255, 255, 255);
                    </font>
                   </property>
                   <property name="styleSheet">
-                   <string notr="true">QRadioButton::indicator { width: 30px; height: 30px;}</string>
+                   <string notr="true">QRadioButton::indicator { width: 40px; height: 40px;}</string>
                   </property>
                   <property name="text">
                    <string>Apagado</string>
