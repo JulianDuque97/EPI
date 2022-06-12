@@ -24,30 +24,33 @@ class Datos_paciente_(QMainWindow):
         
     def dato_altura(self):
         self.altura = self.altura_linedit.text()
-        self.altura_linedit.setEnabled(False)
+        #self.altura_linedit.setEnabled(False)
         return self.altura
             
     def dato_peso(self):
         self.peso = self.peso_linedit.text()
-        self.peso_linedit.setEnabled(False)
+        #self.peso_linedit.setEnabled(False)
+        return self.peso
     
     def dato_sexo(self):
         self.sexo = self.sexo_linedit.text()
-        self.sexo_linedit.setEnabled(False)
+        #self.sexo_linedit.setEnabled(False)
+        return self.sexo
     
     def dato_covid(self):
         self.covid = self.covid_linedit.text()
-        self.covid_linedit.setEnabled(False)
+        #self.covid_linedit.setEnabled(False)
+        return self.covid
             
     def siguiente(self):
         self.close()
         previous_window = MyApp(self)
         previous_window.show()
         	
-class MyApp(QMainWindow):
+class MyApp(Datos_paciente_):
     
-    def __init__(self,  parent=None):
-        super(MyApp, self).__init__(parent)
+    def __init__(self,  Datos_paciente_):
+        super(MyApp, self).__init__(Datos_paciente_)
         loadUi('main.ui', self)
         self.on.setEnabled(True)
         self.off.setEnabled(False)
@@ -60,6 +63,8 @@ class MyApp(QMainWindow):
         self.variable_button.clicked.connect(self.variables_paciente)
                         
         self.on_off = 0
+        
+        #self.label_27.setStyleSheet("color:rgb(0, 0, 0);")
                                 
         self.x = list(range(100))  # 100 time points
         
@@ -81,11 +86,12 @@ class MyApp(QMainWindow):
             self.timer.stop()    
     
     def datos_paciente(self):
-        self.close()
-        next_window = Datos_paciente_(self)
+        #self.hide()
+        next_window = Pop_up(self)
         next_window.show()
         
     def variables_paciente(self):
+        
         next_window = Variables_paciente(self)
         next_window.show()                       
     
@@ -141,14 +147,35 @@ class MyApp(QMainWindow):
         self.graphWidget_3.clear()
         self.timer.stop()     
         
-        self.close()  
+    def close_window(self):
+        self.close()
+    
+class Pop_up(QMainWindow):
+    def __init__(self, parent=None):
+        super(Pop_up, self).__init__(parent)
+        loadUi('Pop_up.ui', self)
+        self.close_window_ = MyApp.close_window(self)
+        self.regresar.clicked.connect(self.Regresar)
+        self.continuar.clicked.connect(self.Continuar)
+    def Regresar(self):
+        if self.regresar.isChecked():
+            self.close()
+    def Continuar(self): 
+        if self.continuar.isChecked():
+            self.close()
+            self.close_window_
+            next_window = Datos_paciente_(self)
+            next_window.show()
+            
+            
+        
         
 class Variables_paciente(MyApp):
     def __init__(self, MyApp):
         super(Variables_paciente, self).__init__(MyApp)
         loadUi('Variables.ui', self)
         self.back_button.clicked.connect(self.back)
-        self.dato_altura_ = Datos_paciente_.dato_altura(self)
+        #self.dato_altura_ = Datos_paciente_.dato_altura(self)
         # self.altura_label.setText(self.dato_altura)
         
     def back(self):

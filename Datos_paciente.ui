@@ -163,19 +163,6 @@ border: 2px sold rgb(255, 255, 255)
          <enum>QFrame::Raised</enum>
         </property>
         <layout class="QGridLayout" name="gridLayout_3">
-         <item row="0" column="0" rowspan="4">
-          <spacer name="horizontalSpacer_4">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>40</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
          <item row="0" column="3" rowspan="4">
           <spacer name="horizontalSpacer_6">
            <property name="orientation">
@@ -189,31 +176,18 @@ border: 2px sold rgb(255, 255, 255)
            </property>
           </spacer>
          </item>
-         <item row="1" column="1">
-          <widget class="QLabel" name="label_44">
-           <property name="font">
-            <font>
-             <family>LEMON MILK</family>
-             <pointsize>15</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
+         <item row="0" column="0" rowspan="4">
+          <spacer name="horizontalSpacer_4">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
            </property>
-           <property name="layoutDirection">
-            <enum>Qt::LeftToRight</enum>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
            </property>
-           <property name="styleSheet">
-            <string notr="true">QLabel{
-border: 2px sold rgb(255, 255, 255)
-}</string>
-           </property>
-           <property name="text">
-            <string>Datos del paciente</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
+          </spacer>
          </item>
          <item row="2" column="1">
           <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -541,6 +515,32 @@ background-color: rgb(45, 45, 56);
             </widget>
            </item>
           </layout>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLabel" name="label_44">
+           <property name="font">
+            <font>
+             <family>LEMON MILK</family>
+             <pointsize>15</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="layoutDirection">
+            <enum>Qt::LeftToRight</enum>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLabel{
+border: 2px sold rgb(255, 255, 255)
+}</string>
+           </property>
+           <property name="text">
+            <string>Datos del paciente</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
          </item>
         </layout>
        </widget>
