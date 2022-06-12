@@ -95,7 +95,7 @@ image:none;
              <property name="font">
               <font>
                <family>LEMON MILK</family>
-               <pointsize>13</pointsize>
+               <pointsize>20</pointsize>
               </font>
              </property>
              <property name="text">
@@ -268,7 +268,7 @@ background-color: rgb(45, 45, 56);
    
 	
 	background-color: rgb(0, 170, 255);
-    width: 20px;
+    width: 25px;
     height: 20px;
     margin: -24px -12px;
 }</string>
@@ -362,7 +362,7 @@ background-color: rgb(45, 45, 56);
            </widget>
           </item>
           <item>
-           <widget class="QSlider" name="horizontalSlider_6">
+           <widget class="QSlider" name="horizontalSlider_8">
             <property name="font">
              <font>
               <pointsize>8</pointsize>
@@ -385,7 +385,7 @@ background-color: rgb(45, 45, 56);
    
 	
 	background-color: rgb(0, 170, 255);
-    width: 20px;
+    width: 25px;
     height: 20px;
     margin: -24px -12px;
 }</string>
@@ -479,7 +479,7 @@ background-color: rgb(45, 45, 56);
            </widget>
           </item>
           <item>
-           <widget class="QSlider" name="horizontalSlider_5">
+           <widget class="QSlider" name="horizontalSlider_9">
             <property name="font">
              <font>
               <pointsize>8</pointsize>
@@ -502,7 +502,7 @@ background-color: rgb(45, 45, 56);
    
 	
 	background-color: rgb(0, 170, 255);
-    width: 20px;
+    width: 25px;
     height: 20px;
     margin: -24px -12px;
 }</string>
@@ -596,7 +596,7 @@ background-color: rgb(45, 45, 56);
            </widget>
           </item>
           <item>
-           <widget class="QSlider" name="horizontalSlider_4">
+           <widget class="QSlider" name="horizontalSlider_10">
             <property name="font">
              <font>
               <pointsize>8</pointsize>
@@ -619,7 +619,7 @@ background-color: rgb(45, 45, 56);
    
 	
 	background-color: rgb(0, 170, 255);
-    width: 20px;
+    width: 25px;
     height: 20px;
     margin: -24px -12px;
 }</string>
@@ -703,7 +703,7 @@ background-color: rgb(45, 45, 56);
                <number>0</number>
               </property>
               <property name="topMargin">
-               <number>0</number>
+               <number>10</number>
               </property>
               <property name="rightMargin">
                <number>0</number>
@@ -2128,7 +2128,7 @@ color: rgb(255, 255, 255);
                 <string>160</string>
                </property>
                <property name="alignment">
-                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                <set>Qt::AlignCenter</set>
                </property>
               </widget>
              </item>
@@ -2173,7 +2173,7 @@ color: rgb(255, 255, 255);
                 <string>60</string>
                </property>
                <property name="alignment">
-                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                <set>Qt::AlignCenter</set>
                </property>
               </widget>
              </item>
@@ -2218,7 +2218,7 @@ color: rgb(255, 255, 255);
                 <string>M</string>
                </property>
                <property name="alignment">
-                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                <set>Qt::AlignCenter</set>
                </property>
               </widget>
              </item>
@@ -2263,7 +2263,7 @@ color: rgb(255, 255, 255);
                 <string>No</string>
                </property>
                <property name="alignment">
-                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                <set>Qt::AlignCenter</set>
                </property>
               </widget>
              </item>
