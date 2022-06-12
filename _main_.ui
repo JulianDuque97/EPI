@@ -1228,13 +1228,13 @@ QPushButton:hover:!pressed
                   <property name="minimumSize">
                    <size>
                     <width>110</width>
-                    <height>35</height>
+                    <height>30</height>
                    </size>
                   </property>
                   <property name="maximumSize">
                    <size>
                     <width>132</width>
-                    <height>16777215</height>
+                    <height>30</height>
                    </size>
                   </property>
                   <property name="font">
@@ -1274,7 +1274,7 @@ QPushButton:hover:!pressed
                   </property>
                   <property name="font">
                    <font>
-                    <pointsize>10</pointsize>
+                    <pointsize>12</pointsize>
                     <weight>75</weight>
                     <bold>true</bold>
                    </font>
@@ -1298,6 +1298,31 @@ QPushButton:hover:!pressed
               <item row="4" column="0">
                <layout class="QVBoxLayout" name="verticalLayout_4">
                 <item>
+                 <widget class="QLabel" name="img_on_off_4">
+                  <property name="minimumSize">
+                   <size>
+                    <width>106</width>
+                    <height>120</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>124</width>
+                    <height>104</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">image: url(:/logos/Images/ventilation.jpg);</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="scaledContents">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item>
                  <widget class="QRadioButton" name="radioButton">
                   <property name="minimumSize">
                    <size>
@@ -1307,7 +1332,7 @@ QPushButton:hover:!pressed
                   </property>
                   <property name="font">
                    <font>
-                    <pointsize>12</pointsize>
+                    <pointsize>15</pointsize>
                     <weight>75</weight>
                     <bold>true</bold>
                    </font>
@@ -1321,38 +1346,13 @@ QPushButton:hover:!pressed
                  <widget class="QRadioButton" name="radioButton_2">
                   <property name="font">
                    <font>
-                    <pointsize>12</pointsize>
+                    <pointsize>15</pointsize>
                     <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
                   <property name="text">
                    <string>Apagado</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QLabel" name="img_on_off_4">
-                  <property name="minimumSize">
-                   <size>
-                    <width>106</width>
-                    <height>120</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>106</width>
-                    <height>104</height>
-                   </size>
-                  </property>
-                  <property name="styleSheet">
-                   <string notr="true">image: url(:/logos/Images/ventilation.jpg);</string>
-                  </property>
-                  <property name="text">
-                   <string/>
-                  </property>
-                  <property name="scaledContents">
-                   <bool>true</bool>
                   </property>
                  </widget>
                 </item>
@@ -1397,12 +1397,18 @@ QPushButton:hover:!pressed
                   <property name="minimumSize">
                    <size>
                     <width>110</width>
-                    <height>23</height>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>40</height>
                    </size>
                   </property>
                   <property name="font">
                    <font>
-                    <pointsize>10</pointsize>
+                    <pointsize>12</pointsize>
                     <weight>75</weight>
                     <bold>true</bold>
                    </font>
@@ -1411,7 +1417,7 @@ QPushButton:hover:!pressed
                    <enum>Qt::LeftToRight</enum>
                   </property>
                   <property name="text">
-                   <string>Energia electrica</string>
+                   <string>Energia electrica:</string>
                   </property>
                   <property name="alignment">
                    <set>Qt::AlignCenter</set>
