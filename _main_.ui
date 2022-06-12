@@ -43,16 +43,6 @@
     <property name="spacing">
      <number>0</number>
     </property>
-    <item row="1" column="1">
-     <widget class="QLabel" name="label">
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(51, 209, 122);</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
     <item row="0" column="1">
      <widget class="QTabWidget" name="tabWidget">
       <property name="tabShape">
@@ -110,7 +100,7 @@ image:none;
              </property>
              <property name="text">
               <string>Hola!
-Antes de comenzar, no se te olvide ingresar los siguientes datos.</string>
+No se te olvide ingresar los siguientes datos.</string>
              </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
@@ -166,7 +156,7 @@ Antes de comenzar, no se te olvide ingresar los siguientes datos.</string>
           </property>
           <property name="sizeHint" stdset="0">
            <size>
-            <width>130</width>
+            <width>148</width>
             <height>20</height>
            </size>
           </property>
@@ -255,9 +245,39 @@ background-color: rgb(45, 45, 56);
            </widget>
           </item>
           <item>
-           <widget class="QSlider" name="horizontalSlider">
+           <widget class="QSlider" name="horizontalSlider_7">
+            <property name="font">
+             <font>
+              <pointsize>8</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">.QSlider {
+    height: 40px;
+  
+}
+
+.QSlider::groove:horizontal {
+    border: 1px solid #262626;
+    height: 5px;
+	background-color: rgb(240, 240, 240);
+    margin: 0 12px;
+}
+
+.QSlider::handle:horizontal {
+   
+	
+	background-color: rgb(0, 170, 255);
+    width: 20px;
+    height: 20px;
+    margin: -24px -12px;
+}</string>
+            </property>
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="tickPosition">
+             <enum>QSlider::NoTicks</enum>
             </property>
            </widget>
           </item>
@@ -342,9 +362,39 @@ background-color: rgb(45, 45, 56);
            </widget>
           </item>
           <item>
-           <widget class="QSlider" name="horizontalSlider_2">
+           <widget class="QSlider" name="horizontalSlider_6">
+            <property name="font">
+             <font>
+              <pointsize>8</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">.QSlider {
+    height: 40px;
+  
+}
+
+.QSlider::groove:horizontal {
+    border: 1px solid #262626;
+    height: 5px;
+	background-color: rgb(240, 240, 240);
+    margin: 0 12px;
+}
+
+.QSlider::handle:horizontal {
+   
+	
+	background-color: rgb(0, 170, 255);
+    width: 20px;
+    height: 20px;
+    margin: -24px -12px;
+}</string>
+            </property>
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="tickPosition">
+             <enum>QSlider::NoTicks</enum>
             </property>
            </widget>
           </item>
@@ -429,9 +479,39 @@ background-color: rgb(45, 45, 56);
            </widget>
           </item>
           <item>
-           <widget class="QSlider" name="horizontalSlider_3">
+           <widget class="QSlider" name="horizontalSlider_5">
+            <property name="font">
+             <font>
+              <pointsize>8</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">.QSlider {
+    height: 40px;
+  
+}
+
+.QSlider::groove:horizontal {
+    border: 1px solid #262626;
+    height: 5px;
+	background-color: rgb(240, 240, 240);
+    margin: 0 12px;
+}
+
+.QSlider::handle:horizontal {
+   
+	
+	background-color: rgb(0, 170, 255);
+    width: 20px;
+    height: 20px;
+    margin: -24px -12px;
+}</string>
+            </property>
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="tickPosition">
+             <enum>QSlider::NoTicks</enum>
             </property>
            </widget>
           </item>
@@ -517,98 +597,40 @@ background-color: rgb(45, 45, 56);
           </item>
           <item>
            <widget class="QSlider" name="horizontalSlider_4">
+            <property name="font">
+             <font>
+              <pointsize>8</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">.QSlider {
+    height: 40px;
+  
+}
+
+.QSlider::groove:horizontal {
+    border: 1px solid #262626;
+    height: 5px;
+	background-color: rgb(240, 240, 240);
+    margin: 0 12px;
+}
+
+.QSlider::handle:horizontal {
+   
+	
+	background-color: rgb(0, 170, 255);
+    width: 20px;
+    height: 20px;
+    margin: -24px -12px;
+}</string>
+            </property>
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
+            <property name="tickPosition">
+             <enum>QSlider::NoTicks</enum>
+            </property>
            </widget>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_7">
-            <item>
-             <spacer name="horizontalSpacer_12">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>40</width>
-                <height>20</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
-            <item>
-             <widget class="QPushButton" name="siguiente_button_2">
-              <property name="minimumSize">
-               <size>
-                <width>140</width>
-                <height>45</height>
-               </size>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>140</width>
-                <height>45</height>
-               </size>
-              </property>
-              <property name="font">
-               <font>
-                <pointsize>15</pointsize>
-                <weight>75</weight>
-                <bold>true</bold>
-               </font>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">QPushButton{
-	color: rgb(247, 247, 247);
-	
-	
-	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 159, 41, 225), stop:1 rgba(248, 54, 0, 255));
-	border-radius: 10%;
-    border: 1px solid #000;
-	
-}
-
-QPushButton:hover {background-color: rgb(51, 209, 122);}
-
-QPushButton:hover:!pressed
-{
-  border: 1.5px solid black;
-}
-</string>
-              </property>
-              <property name="text">
-               <string/>
-              </property>
-              <property name="icon">
-               <iconset resource="logos.qrc">
-                <normaloff>:/logos/Images/right-arrow.png</normaloff>:/logos/Images/right-arrow.png</iconset>
-              </property>
-              <property name="iconSize">
-               <size>
-                <width>45</width>
-                <height>45</height>
-               </size>
-              </property>
-              <property name="checkable">
-               <bool>true</bool>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <spacer name="horizontalSpacer_11">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>40</width>
-                <height>20</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
-           </layout>
           </item>
          </layout>
         </item>
@@ -619,7 +641,7 @@ QPushButton:hover:!pressed
           </property>
           <property name="sizeHint" stdset="0">
            <size>
-            <width>129</width>
+            <width>147</width>
             <height>20</height>
            </size>
           </property>
@@ -2064,6 +2086,32 @@ color: rgb(255, 255, 255);
        </attribute>
       </widget>
      </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLabel" name="label">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(51, 209, 122);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeType">
+       <enum>QSizePolicy::Fixed</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
     </item>
    </layout>
   </widget>
