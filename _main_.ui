@@ -28,6 +28,21 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <property name="spacing">
+     <number>0</number>
+    </property>
     <item row="2" column="1">
      <spacer name="verticalSpacer">
       <property name="orientation">
@@ -51,6 +66,9 @@
       </property>
       <property name="currentIndex">
        <number>1</number>
+      </property>
+      <property name="elideMode">
+       <enum>Qt::ElideNone</enum>
       </property>
       <widget class="QWidget" name="tab_2">
        <attribute name="title">
@@ -692,7 +710,7 @@ color: rgb(255, 255, 255);
                  <enum>QFrame::NoFrame</enum>
                 </property>
                 <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
+                 <enum>QFrame::Plain</enum>
                 </property>
                 <layout class="QGridLayout" name="gridLayout_28">
                  <property name="leftMargin">
