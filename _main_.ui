@@ -747,8 +747,8 @@ background-color: rgb(45, 45, 56);
                <widget class="QFrame" name="frame_31">
                 <property name="maximumSize">
                  <size>
-                  <width>150</width>
-                  <height>80</height>
+                  <width>160</width>
+                  <height>90</height>
                  </size>
                 </property>
                 <property name="styleSheet">
@@ -839,8 +839,8 @@ color: rgb(255, 255, 255);
                <widget class="QFrame" name="frame_32">
                 <property name="maximumSize">
                  <size>
-                  <width>150</width>
-                  <height>80</height>
+                  <width>160</width>
+                  <height>90</height>
                  </size>
                 </property>
                 <property name="styleSheet">
@@ -931,8 +931,8 @@ color: rgb(255, 255, 255);
                <widget class="QFrame" name="frame_29">
                 <property name="maximumSize">
                  <size>
-                  <width>150</width>
-                  <height>80</height>
+                  <width>160</width>
+                  <height>90</height>
                  </size>
                 </property>
                 <property name="styleSheet">
@@ -1023,8 +1023,8 @@ color: rgb(255, 255, 255);
                <widget class="QFrame" name="frame_27">
                 <property name="maximumSize">
                  <size>
-                  <width>150</width>
-                  <height>80</height>
+                  <width>160</width>
+                  <height>90</height>
                  </size>
                 </property>
                 <property name="styleSheet">
@@ -1121,8 +1121,8 @@ color: rgb(255, 255, 255);
                 </property>
                 <property name="maximumSize">
                  <size>
-                  <width>150</width>
-                  <height>80</height>
+                  <width>160</width>
+                  <height>90</height>
                  </size>
                 </property>
                 <property name="styleSheet">
@@ -1468,7 +1468,7 @@ color: rgb(255, 255, 255);
                    </property>
                    <property name="maximumSize">
                     <size>
-                     <width>175</width>
+                     <width>190</width>
                      <height>16777215</height>
                     </size>
                    </property>
@@ -1494,7 +1494,7 @@ color: rgb(255, 255, 255);
                      <number>0</number>
                     </property>
                     <property name="bottomMargin">
-                     <number>18</number>
+                     <number>0</number>
                     </property>
                     <property name="spacing">
                      <number>0</number>
@@ -1504,18 +1504,18 @@ color: rgb(255, 255, 255);
                       <property name="minimumSize">
                        <size>
                         <width>0</width>
-                        <height>0</height>
+                        <height>43</height>
                        </size>
                       </property>
                       <property name="maximumSize">
                        <size>
-                        <width>165</width>
+                        <width>192</width>
                         <height>30</height>
                        </size>
                       </property>
                       <property name="font">
                        <font>
-                        <pointsize>10</pointsize>
+                        <pointsize>12</pointsize>
                         <weight>75</weight>
                         <bold>true</bold>
                        </font>
@@ -1548,7 +1548,7 @@ color: rgb(255, 255, 255);
                       <property name="maximumSize">
                        <size>
                         <width>16777215</width>
-                        <height>55</height>
+                        <height>45</height>
                        </size>
                       </property>
                       <property name="font">
@@ -1669,8 +1669,8 @@ QPushButton:hover:!pressed
                 </property>
                 <property name="maximumSize">
                  <size>
-                  <width>150</width>
-                  <height>80</height>
+                  <width>160</width>
+                  <height>90</height>
                  </size>
                 </property>
                 <property name="styleSheet">
