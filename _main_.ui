@@ -87,7 +87,7 @@
        <enum>QTabWidget::Rounded</enum>
       </property>
       <property name="currentIndex">
-       <number>3</number>
+       <number>0</number>
       </property>
       <property name="elideMode">
        <enum>Qt::ElideNone</enum>
@@ -129,7 +129,7 @@
            <number>0</number>
           </property>
           <item>
-           <widget class="QLineEdit" name="altura_linedit_2">
+           <widget class="QLineEdit" name="altura_linedit">
             <property name="minimumSize">
              <size>
               <width>200</width>
@@ -165,16 +165,13 @@ border: 2px sold rgb(255, 255, 255)
 
 }
 
-QLineEdit:focus{
-border:2px solid rgb(85, 170, 255);
-background-color: rgb(45, 45, 56);
-}</string>
+</string>
             </property>
             <property name="inputMask">
              <string/>
             </property>
             <property name="text">
-             <string/>
+             <string>Altura</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
@@ -214,7 +211,7 @@ background-color: rgb(45, 45, 56);
            </widget>
           </item>
           <item>
-           <widget class="QSlider" name="horizontalSlider_7">
+           <widget class="QSlider" name="altura_slider">
             <property name="font">
              <font>
               <pointsize>8</pointsize>
@@ -242,6 +239,18 @@ background-color: rgb(45, 45, 56);
     margin: -24px -12px;
 }</string>
             </property>
+            <property name="minimum">
+             <number>140</number>
+            </property>
+            <property name="maximum">
+             <number>200</number>
+            </property>
+            <property name="singleStep">
+             <number>1</number>
+            </property>
+            <property name="value">
+             <number>140</number>
+            </property>
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
@@ -251,7 +260,7 @@ background-color: rgb(45, 45, 56);
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="peso_linedit_2">
+           <widget class="QLineEdit" name="peso_linedit">
             <property name="minimumSize">
              <size>
               <width>200</width>
@@ -287,16 +296,13 @@ border: 2px sold rgb(255, 255, 255)
 
 }
 
-QLineEdit:focus{
-border:2px solid rgb(85, 170, 255);
-background-color: rgb(45, 45, 56);
-}</string>
+</string>
             </property>
             <property name="inputMask">
              <string/>
             </property>
             <property name="text">
-             <string/>
+             <string>Peso</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
@@ -336,7 +342,7 @@ background-color: rgb(45, 45, 56);
            </widget>
           </item>
           <item>
-           <widget class="QSlider" name="horizontalSlider_8">
+           <widget class="QSlider" name="peso_slider">
             <property name="font">
              <font>
               <pointsize>8</pointsize>
@@ -364,6 +370,12 @@ background-color: rgb(45, 45, 56);
     margin: -24px -12px;
 }</string>
             </property>
+            <property name="minimum">
+             <number>40</number>
+            </property>
+            <property name="maximum">
+             <number>140</number>
+            </property>
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
@@ -373,7 +385,7 @@ background-color: rgb(45, 45, 56);
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="sexo_linedit_2">
+           <widget class="QLineEdit" name="sexo_linedit">
             <property name="minimumSize">
              <size>
               <width>200</width>
@@ -408,17 +420,13 @@ QLineEdit:hover{
 border: 2px sold rgb(255, 255, 255)
 
 }
-
-QLineEdit:focus{
-border:2px solid rgb(85, 170, 255);
-background-color: rgb(45, 45, 56);
-}</string>
+</string>
             </property>
             <property name="inputMask">
              <string/>
             </property>
             <property name="text">
-             <string/>
+             <string>Sexo</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
@@ -458,7 +466,7 @@ background-color: rgb(45, 45, 56);
            </widget>
           </item>
           <item>
-           <widget class="QSlider" name="horizontalSlider_9">
+           <widget class="QSlider" name="sexo_slider">
             <property name="font">
              <font>
               <pointsize>8</pointsize>
@@ -486,6 +494,9 @@ background-color: rgb(45, 45, 56);
     margin: -24px -12px;
 }</string>
             </property>
+            <property name="maximum">
+             <number>1</number>
+            </property>
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
@@ -495,7 +506,7 @@ background-color: rgb(45, 45, 56);
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="covid_linedit_2">
+           <widget class="QLineEdit" name="covid_linedit">
             <property name="minimumSize">
              <size>
               <width>200</width>
@@ -531,16 +542,13 @@ border: 2px sold rgb(255, 255, 255)
 
 }
 
-QLineEdit:focus{
-border:2px solid rgb(85, 170, 255);
-background-color: rgb(45, 45, 56);
-}</string>
+</string>
             </property>
             <property name="inputMask">
              <string/>
             </property>
             <property name="text">
-             <string/>
+             <string>Covid</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
@@ -580,7 +588,7 @@ background-color: rgb(45, 45, 56);
            </widget>
           </item>
           <item>
-           <widget class="QSlider" name="horizontalSlider_10">
+           <widget class="QSlider" name="covid_slider">
             <property name="font">
              <font>
               <pointsize>8</pointsize>
@@ -607,6 +615,9 @@ background-color: rgb(45, 45, 56);
     height: 20px;
     margin: -24px -12px;
 }</string>
+            </property>
+            <property name="maximum">
+             <number>1</number>
             </property>
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
@@ -1311,7 +1322,7 @@ color: rgb(255, 255, 255);
                <number>10</number>
               </property>
               <item row="2" column="0">
-               <widget class="PlotWidget" name="graphWidget_7" native="true">
+               <widget class="PlotWidget" name="graphWidget_1" native="true">
                 <property name="minimumSize">
                  <size>
                   <width>0</width>
@@ -1654,7 +1665,7 @@ QPushButton:hover:!pressed
                </widget>
               </item>
               <item row="0" column="0">
-               <widget class="PlotWidget" name="graphWidget_8" native="true">
+               <widget class="PlotWidget" name="graphWidget_2" native="true">
                 <property name="minimumSize">
                  <size>
                   <width>0</width>
@@ -1664,7 +1675,7 @@ QPushButton:hover:!pressed
                </widget>
               </item>
               <item row="1" column="0">
-               <widget class="PlotWidget" name="graphWidget_9" native="true">
+               <widget class="PlotWidget" name="graphWidget_3" native="true">
                 <property name="minimumSize">
                  <size>
                   <width>0</width>
