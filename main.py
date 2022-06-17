@@ -24,18 +24,23 @@ class main(QMainWindow):
         self.sexo_linedit.setReadOnly(True)
         self.covid_linedit.setReadOnly(True)
         
-        self.tabWidget.currentChanged.connect(self.print_)
+        self.tabWidget.currentChanged.connect(self.tabs)
         self.altura_slider.valueChanged.connect(self.altura)
         self.peso_slider.valueChanged.connect(self.peso)
         self.sexo_slider.valueChanged.connect(self.sexo)
         self.covid_slider.valueChanged.connect(self.covid)
         
-        self.altura_ = self.altura_linedit.setText('0')
-        self.peso_ = self.peso_linedit.setText('0')
+        self.encendido_radioButton.toggled.connect(self.encendido)
+        self.apagado_radioButton.toggled.connect(self.apagado)
+        self.reiniciar_radioButton.toggled.connect(self.reinicio)
+        
         self.altura_ = '140'
         self.peso_ = '40'
         self._sexo_ = 'Hombre'
         self._covid_ = 'No'
+        
+        self.altura_linedit.setText(self.altura_)
+        self.peso_linedit.setText(self.peso_)
         self.sexo_ = self.sexo_linedit.setText('Mujer')
         self.covid_ = self.covid_linedit.setText('No')
         
@@ -65,14 +70,22 @@ class main(QMainWindow):
             self._covid_ = 'No'
             self.covid_linedit.setText(self._covid_)
         
-    def print_(self):
+    def tabs(self):
         index = self.tabWidget.currentIndex()
         if index == 2:
             self.altura_label.setText(self.altura_)
             self.peso_label.setText(self.peso_)
             self.sexo_label.setText(self._sexo_)
             self.covid_label.setText(self._covid_)
-        
+            
+    def encendido(self):
+        pass 
+    
+    def apagado(self):
+        pass 
+    
+    def reinicio(self):
+        pass 
   
 # #-----------------------------------------------------------------------------------------------------------------#
 app = QApplication(sys.argv)
