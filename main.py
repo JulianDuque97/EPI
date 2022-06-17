@@ -10,10 +10,13 @@ from PyQt5 import QtGui
 from PyQt5 import QtCore
 
 import logos_rc
+
 class main(QMainWindow):
     def __init__(self, parent=None):
         super(main, self).__init__(parent)
         loadUi('_main_.ui', self)
+        
+        #self.tabWidget.setCurrentIndex(2)
         
         self.play_stop_button_.setEnabled(False)
         self.play_stop_button_.clicked.connect(self.play_stop)
