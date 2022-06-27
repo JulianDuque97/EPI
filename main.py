@@ -3,7 +3,7 @@ import string
 import sys, time, os, traceback
 from tkinter import Variable
 from random import randint
-from numpy import sqrt, power, var
+import numpy as np
 
 from pyqtgraph import PlotWidget, plot
 import pyqtgraph as pg
@@ -30,8 +30,11 @@ topic_4 = 'esp32/pagina_web'
 client_id = 'Raspberry'
 client = mqtt_client.Client(client_id)
 
-opcion = ''
 valor_Vt = 0
+
+A1=0.000390570
+A2=0.000273472
+RO=1.29
 
 class WorkerThread(QThread):
     
@@ -45,25 +48,25 @@ class WorkerThread(QThread):
             try:
                 client = self.connect_mqtt()
                 self.subscribe(client)
+                client.loop_forever()
             except os.error:
                 print("not connected to network")
                 self.signal_input.emit("1")
             
-
     def connect_mqtt(self):
         def on_connect(client, userdata, flags, rc):
             if rc == 0:
-                print("Connected to MQTT Broker!")
                 self.signal_input.emit("0")
+                print("Connected to MQTT Broker!")
+
         def on_disconnect(client, userdata, rc):
             if rc != 0:
-                print("Unexpected MQTT disconnection. Will auto-reconnect")
                 self.signal_input.emit("1")
-        
+                print("Unexpected MQTT disconnection. Will auto-reconnect")
+                
         client.on_connect = on_connect
         client.on_disconnect = on_disconnect
         client.connect(broker, port)
-        client.loop_forever()
         return client
     
     def subscribe(self,client: mqtt_client):
@@ -83,7 +86,6 @@ class WorkerThread(QThread):
         client.subscribe(topic_1)
         client.subscribe(topic_2)
         client.subscribe(topic_4)
-        #client.subscribe([(topic_1, 0), (topic_2, 0)])
         client.on_message = on_message
     
 class Main(QMainWindow):
@@ -91,14 +93,15 @@ class Main(QMainWindow):
         super(Main, self).__init__(parent)
         loadUi('_main_.ui', self)
         
-        client.publish(topic_3, '0')
-        
         self.wt=WorkerThread()
         self.wt.start()
+        client.publish(topic_3, '0')
+        
+        self.posicion_motor = '0'
         
         self.timer = QtCore.QTimer()
         
-        self.wt.signal_input.connect(self.dato)
+        self.wt.signal_input.connect(self.banner)
         
         self.play_stop_button_.setEnabled(False)
         self.Vt_slider.setEnabled(False)
@@ -147,9 +150,18 @@ class Main(QMainWindow):
         today = date.today()
         self.date_label.setText(str(today))
         
+    def banner(self,value):
+        if value == '1':
+            self.label.setStyleSheet("background-color: rgb(255, 0, 0)")
+            self.label.setText("NOT CONNECTED")
+        if value == '0':
+            self.label.setStyleSheet("background-color: rgb(51, 209, 122)")
+            self.label.setText("CONNECTED")  
+        
     def change_Vt(self):
+        
         value_Vt = self.Vt_slider.value()
-    
+        
         if value_Vt == 0:
             self.posicion_motor = '0'
             self.Vt_label.setText('0')
@@ -228,13 +240,13 @@ class Main(QMainWindow):
             self.detener_radioButton.setChecked(True)
             self.reinicio_ = 0
         if index == 1:
-            
             self.altura_label.setText(self.altura_)
             self.peso_label.setText(self.peso_)
             self.sexo_label.setText(self._sexo_)
             self.covid_label.setText(self._covid_)
             
     def encendido(self):
+        client.publish(topic_3, self.posicion_motor)
         self.graphWidget_1.clear()
         self.graphWidget_2.clear()
         self.graphWidget_3.clear()
@@ -260,7 +272,7 @@ class Main(QMainWindow):
         self.data_line_2 = self.graphWidget_2.plot(self.x, self.y2, pen=pen2)
         self.data_line_3 = self.graphWidget_3.plot(self.x, self.y3, pen=pen3)
         #ACTIVANDO EL TIMER, SE PUEDE CAMBIAR EL TIEMPO DE MUESTREO PARA LAS GRAFICAS
-        #self.timer.timeout.connect(self.update_plot_data)
+        self.timer.timeout.connect(self.update_plot_data)
         self.timer.setInterval(100)
         self.timer.start()
         
@@ -268,22 +280,16 @@ class Main(QMainWindow):
         if 'p' in value:
             presion = value.replace("p", "")
             self.presion = float(presion)
-            print('Presion: '+ str(self.presion))
+            #print('Presion: '+ str(self.presion))
             
         if 'f' in value:
             pre_flujo = value.replace("f", "")
             self.flujo = float(pre_flujo)
-            print('Flujo: '+ str(self.flujo))
-            
-        if '1' in value:
-            self.label.setStyleSheet("background-color: rgb(255, 0, 0)")
-            self.label.setText("NOT CONNECTED")
-            
-        elif '0' in value:
-            self.label.setStyleSheet("background-color: rgb(51, 209, 122)")
-            self.label.setText("CONNECTED")
+            #self.flujo=((A1*A2*0.1)*(np.sqrt((2*(pre_flujo*98.0638))/((np.power(A1,2)-np.power(A2,2))*RO))))*60000
+            #print('Flujo: '+ str(self.flujo))
                     
     def detener(self):
+        client.publish(topic_3, '0')
         self.on_off_label.setText('Sistema: Detenido')
         self.encendido_radioButton.setText("Encender")
         self.detener_radioButton.setText("Detenido")
@@ -291,9 +297,10 @@ class Main(QMainWindow):
         self.Vt_slider.setEnabled(False)
         self.img_on_off.setPixmap(QtGui.QPixmap("Images/old-man.jpg"))
         self.on_off = 0
-        client.publish(topic_3, '0')
     
     def reinicio(self):
+        self.Vt_label.setText('0')
+        self.Vt_label_2.setText('0')
         self.reinicio_ = 1
         self.tabWidget.setCurrentIndex(0) 
         self.img_on_off.setPixmap(QtGui.QPixmap("Images/old-man.jpg"))
