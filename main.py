@@ -32,9 +32,7 @@ client = mqtt_client.Client(client_id)
 
 valor_Vt = 0
 
-A1=0.000390570
-A2=0.000273472
-RO=1.29
+presion_average = []
 
 class WorkerThread(QThread):
     
@@ -279,13 +277,22 @@ class Main(QMainWindow):
     def dato(self,value):
         if 'p' in value:
             presion = value.replace("p", "")
-            self.presion = float(presion)
-            #print('Presion: '+ str(self.presion))
+            presion = float(presion)
+            if presion <= 1:
+                self.presion = 0
+            else:
+                self.presion = presion
+            print('Presion: '+ str(self.presion))
             
         if 'f' in value:
-            pre_flujo = value.replace("f", "")
-            self.flujo = float(pre_flujo)
-            #self.flujo=((A1*A2*0.1)*(np.sqrt((2*(pre_flujo*98.0638))/((np.power(A1,2)-np.power(A2,2))*RO))))*60000
+            flujo = value.replace("f", "")
+            flujo = float(flujo)
+            if flujo <= 1:
+                self.flujo = 0
+            else:
+                self.flujo = flujo
+            print('Presion: '+ str(self.presion))
+            
             #print('Flujo: '+ str(self.flujo))
                     
     def detener(self):
