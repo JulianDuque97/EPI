@@ -52,6 +52,7 @@
      <widget class="QLabel" name="label">
       <property name="font">
        <font>
+        <pointsize>24</pointsize>
         <weight>75</weight>
         <bold>true</bold>
        </font>
@@ -78,7 +79,7 @@
       <property name="sizeHint" stdset="0">
        <size>
         <width>20</width>
-        <height>20</height>
+        <height>30</height>
        </size>
       </property>
      </spacer>

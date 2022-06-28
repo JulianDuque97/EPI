@@ -278,6 +278,7 @@ class Main(QMainWindow):
         self.timer.start()
         
     def dato(self,value):
+        
         if 'p' in value:
             presion = value.replace("p", "")
             presion = float(presion)
