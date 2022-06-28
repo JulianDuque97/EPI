@@ -102,8 +102,10 @@ class Main(QMainWindow):
         self.wt.signal_input.connect(self.banner)
         
         self.play_stop_button_.setEnabled(False)
+        self.grafica_button.setEnabled(False)
         self.Vt_slider.setEnabled(False)
         self.play_stop_button_.clicked.connect(self.play_stop)
+        self.grafica_button.clicked.connect(self.grafica)
                                
         self.x = list(range(100))  # 100 time points
         
@@ -114,6 +116,10 @@ class Main(QMainWindow):
         self.graphWidget_1.setBackground('w')    
         self.graphWidget_2.setBackground('w')
         self.graphWidget_3.setBackground('w')
+        
+        self.graphWidget_1.show()    
+        self.graphWidget_2.hide()
+        self.graphWidget_3.hide()
         
         self.altura_linedit.setReadOnly(True)
         self.peso_linedit.setReadOnly(True)
@@ -128,15 +134,13 @@ class Main(QMainWindow):
         
         self.encendido_radioButton.toggled.connect(self.encendido)
         self.detener_radioButton.toggled.connect(self.detener)
-        self.reiniciar_radioButton.toggled.connect(self.reinicio)
-                
+               
         self.Vt_slider.valueChanged.connect(self.change_Vt)
         
         self.altura_ = '140'
         self.peso_ = '40'
         self._sexo_ = 'Hombre'
         self._covid_ = 'No'
-        self.reinicio_ = 0
         
         self.altura_linedit.setText(self.altura_)
         self.peso_linedit.setText(self.peso_)
@@ -234,9 +238,6 @@ class Main(QMainWindow):
         
     def tabs(self):
         index = self.tabWidget.currentIndex()
-        if self.reinicio_ == 1:
-            self.detener_radioButton.setChecked(True)
-            self.reinicio_ = 0
         if index == 1:
             self.altura_label.setText(self.altura_)
             self.peso_label.setText(self.peso_)
@@ -244,6 +245,7 @@ class Main(QMainWindow):
             self.covid_label.setText(self._covid_)
             
     def encendido(self):
+        self.grafica_ = 1
         client.publish(topic_3, self.posicion_motor)
         self.graphWidget_1.clear()
         self.graphWidget_2.clear()
@@ -252,6 +254,7 @@ class Main(QMainWindow):
         self.encendido_radioButton.setText("Encendido")
         self.detener_radioButton.setText("Detener")
         self.play_stop_button_.setEnabled(True)
+        self.grafica_button.setEnabled(True)
         self.Vt_slider.setEnabled(True)          
         self.img_on_off.setPixmap(QtGui.QPixmap("Images/oxygen-mask.jpg"))
         #COLOR GRAFICAS    
@@ -282,7 +285,7 @@ class Main(QMainWindow):
                 self.presion = 0
             else:
                 self.presion = presion
-            print('Presion: '+ str(self.presion))
+                print('Presion: '+ str(self.presion))  
             
         if 'f' in value:
             flujo = value.replace("f", "")
@@ -291,9 +294,7 @@ class Main(QMainWindow):
                 self.flujo = 0
             else:
                 self.flujo = flujo
-            print('Presion: '+ str(self.presion))
-            
-            #print('Flujo: '+ str(self.flujo))
+                #print('Flujo: '+ str(self.flujo))
                     
     def detener(self):
         client.publish(topic_3, '0')
@@ -304,18 +305,26 @@ class Main(QMainWindow):
         self.Vt_slider.setEnabled(False)
         self.img_on_off.setPixmap(QtGui.QPixmap("Images/old-man.jpg"))
         self.on_off = 0
-    
-    def reinicio(self):
-        self.Vt_label.setText('0')
-        self.Vt_label_2.setText('0')
-        self.reinicio_ = 1
-        self.tabWidget.setCurrentIndex(0) 
-        self.img_on_off.setPixmap(QtGui.QPixmap("Images/old-man.jpg"))
-        self.on_off = 0
-        self.graphWidget_1.clear()
-        self.graphWidget_2.clear()
-        self.graphWidget_3.clear()
-        self.timer.stop()  
+        
+    def grafica(self):
+        if self.grafica_ == 1:
+            self.grafica_ = 2
+            self.grafica_button.setText('Flujo')
+            self.graphWidget_1.hide()    
+            self.graphWidget_2.show()
+            self.graphWidget_3.hide()
+        elif self.grafica_ == 2:
+            self.grafica_ = 0
+            self.grafica_button.setText('Volumen')
+            self.graphWidget_1.hide()    
+            self.graphWidget_2.hide()
+            self.graphWidget_3.show()
+        elif self.grafica_ == 0:
+            self.grafica_ = 1
+            self.grafica_button.setText('Presion')
+            self.graphWidget_1.show()    
+            self.graphWidget_2.hide()
+            self.graphWidget_3.hide()
     
     #def update_plot_data(self, dato):
     def update_plot_data(self):
@@ -334,33 +343,7 @@ class Main(QMainWindow):
         self.data_line_1.setData(self.x, self.y1)  # Update the data.    
         self.data_line_2.setData(self.x, self.y2)  # Update the data. 
         self.data_line_3.setData(self.x, self.y3)  # Update the data. 
-        
-    # def change_Vt(self):
-    #     global opcion
-    #     opcion = 'Vt'
-    #     next_window = Pop(self)
-    #     next_window.show()
-              
-# class Pop(QMainWindow):
-#     def __init__(self, parent=None):
-#         super(Pop, self).__init__(parent)
-#         loadUi('pop_up.ui', self)
-#         self.slider.valueChanged.connect(self.dato)
-                
-#     def dato(self):
-#         if opcion == 'Vt':
-#             global valor_Vt
-#             self.slider.setMinimum(0)
-#             self.slider.setMaximum(7)
-#             self.value = self.slider.value()
-#             if self.value == 0:
-#                 valor_Vt = 0
-#                 self.linedit.setText(str(valor_Vt) + ' ml')
-#             elif self.value == 1:
-#                 valor_Vt = 138
-#                 self.linedit.setText(str(valor_Vt) +' ml')
-            
-            
+               
 # #-----------------------------------------------------------------------------------------------------------------#
 app = QApplication(sys.argv)
 main = Main()

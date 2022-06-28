@@ -1330,17 +1330,7 @@ color: rgb(255, 255, 255);
               <property name="verticalSpacing">
                <number>10</number>
               </property>
-              <item row="1" column="0">
-               <widget class="PlotWidget" name="graphWidget_2" native="true">
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>130</height>
-                 </size>
-                </property>
-               </widget>
-              </item>
-              <item row="6" column="0">
+              <item row="4" column="0">
                <widget class="QFrame" name="frame_14">
                 <property name="minimumSize">
                  <size>
@@ -1630,7 +1620,7 @@ color: rgb(255, 255, 255);
                       <property name="maximumSize">
                        <size>
                         <width>188</width>
-                        <height>45</height>
+                        <height>50</height>
                        </size>
                       </property>
                       <property name="font">
@@ -1676,8 +1666,8 @@ QPushButton:hover:!pressed
                 </layout>
                </widget>
               </item>
-              <item row="3" column="0">
-               <widget class="PlotWidget" name="graphWidget_3" native="true">
+              <item row="0" column="0">
+               <widget class="PlotWidget" name="graphWidget_1" native="true">
                 <property name="minimumSize">
                  <size>
                   <width>0</width>
@@ -1686,8 +1676,18 @@ QPushButton:hover:!pressed
                 </property>
                </widget>
               </item>
-              <item row="0" column="0">
-               <widget class="PlotWidget" name="graphWidget_1" native="true">
+              <item row="1" column="0">
+               <widget class="PlotWidget" name="graphWidget_2" native="true">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>130</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="PlotWidget" name="graphWidget_3" native="true">
                 <property name="minimumSize">
                  <size>
                   <width>0</width>
@@ -2027,7 +2027,7 @@ color: rgb(255, 255, 255);
               <item row="3" column="0">
                <layout class="QVBoxLayout" name="verticalLayout_4">
                 <property name="spacing">
-                 <number>15</number>
+                 <number>5</number>
                 </property>
                 <property name="rightMargin">
                  <number>0</number>
@@ -2129,31 +2129,56 @@ color: rgb(255, 255, 255);
                  </widget>
                 </item>
                 <item>
-                 <widget class="QRadioButton" name="reiniciar_radioButton">
+                 <widget class="QPushButton" name="grafica_button">
+                  <property name="enabled">
+                   <bool>true</bool>
+                  </property>
                   <property name="minimumSize">
                    <size>
-                    <width>0</width>
-                    <height>0</height>
+                    <width>60</width>
+                    <height>50</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>188</width>
+                    <height>50</height>
                    </size>
                   </property>
                   <property name="font">
                    <font>
-                    <pointsize>14</pointsize>
+                    <pointsize>16</pointsize>
                     <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
                   <property name="styleSheet">
-                   <string notr="true">QRadioButton::indicator { width: 35px; height: 35px;}</string>
+                   <string notr="true">QPushButton{
+	color: rgb(247, 247, 247);
+	
+	
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 159, 41, 225), stop:1 rgba(248, 54, 0, 255));
+	border-radius: 10%;
+    border: 1px solid #000;
+	
+}
+
+QPushButton:hover {background-color: rgb(51, 209, 122);}
+
+QPushButton:hover:!pressed
+{
+  border: 1.5px solid black;
+}
+</string>
                   </property>
                   <property name="text">
-                   <string>Reiniciar</string>
+                   <string>Presion</string>
                   </property>
-                  <property name="iconSize">
-                   <size>
-                    <width>54</width>
-                    <height>41</height>
-                   </size>
+                  <property name="checkable">
+                   <bool>true</bool>
+                  </property>
+                  <property name="checked">
+                   <bool>false</bool>
                   </property>
                  </widget>
                 </item>
