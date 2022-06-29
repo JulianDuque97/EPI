@@ -7,13 +7,13 @@
     <x>0</x>
     <y>0</y>
     <width>1024</width>
-    <height>600</height>
+    <height>570</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
     <width>1024</width>
-    <height>600</height>
+    <height>570</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -48,22 +48,6 @@
     <property name="spacing">
      <number>0</number>
     </property>
-    <item row="2" column="1">
-     <spacer name="verticalSpacer">
-      <property name="orientation">
-       <enum>Qt::Vertical</enum>
-      </property>
-      <property name="sizeType">
-       <enum>QSizePolicy::Fixed</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>20</width>
-        <height>30</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
     <item row="1" column="1">
      <widget class="QLabel" name="label">
       <property name="font">
@@ -250,13 +234,19 @@ color: rgb(255, 255, 255);
                    </item>
                    <item>
                     <widget class="QLabel" name="label_123">
+                     <property name="maximumSize">
+                      <size>
+                       <width>16777215</width>
+                       <height>20</height>
+                      </size>
+                     </property>
                      <property name="font">
                       <font>
                        <pointsize>9</pointsize>
                       </font>
                      </property>
                      <property name="text">
-                      <string>ml</string>
+                      <string>mL</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignHCenter|Qt::AlignTop</set>
@@ -348,16 +338,22 @@ color: rgb(255, 255, 255);
                    </item>
                    <item>
                     <widget class="QLabel" name="label_106">
+                     <property name="maximumSize">
+                      <size>
+                       <width>16777215</width>
+                       <height>20</height>
+                      </size>
+                     </property>
                      <property name="font">
                       <font>
                        <pointsize>9</pointsize>
                       </font>
                      </property>
                      <property name="text">
-                      <string>cmH20</string>
+                      <string>%</string>
                      </property>
                      <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
+                      <set>Qt::AlignHCenter|Qt::AlignTop</set>
                      </property>
                     </widget>
                    </item>
@@ -446,6 +442,12 @@ color: rgb(255, 255, 255);
                    </item>
                    <item>
                     <widget class="QLabel" name="label_112">
+                     <property name="maximumSize">
+                      <size>
+                       <width>16777215</width>
+                       <height>20</height>
+                      </size>
+                     </property>
                      <property name="font">
                       <font>
                        <pointsize>9</pointsize>
@@ -455,7 +457,7 @@ color: rgb(255, 255, 255);
                       <string>cmH20</string>
                      </property>
                      <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
+                      <set>Qt::AlignHCenter|Qt::AlignTop</set>
                      </property>
                     </widget>
                    </item>
@@ -544,16 +546,22 @@ color: rgb(255, 255, 255);
                    </item>
                    <item>
                     <widget class="QLabel" name="label_105">
+                     <property name="maximumSize">
+                      <size>
+                       <width>16777215</width>
+                       <height>20</height>
+                      </size>
+                     </property>
                      <property name="font">
                       <font>
                        <pointsize>9</pointsize>
                       </font>
                      </property>
                      <property name="text">
-                      <string>cmH20</string>
+                      <string>bpm</string>
                      </property>
                      <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
+                      <set>Qt::AlignHCenter|Qt::AlignTop</set>
                      </property>
                     </widget>
                    </item>
@@ -621,17 +629,23 @@ color: rgb(255, 255, 255);
                     </widget>
                    </item>
                    <item>
-                    <widget class="QLabel" name="label_83">
+                    <widget class="QLabel" name="label_110">
+                     <property name="maximumSize">
+                      <size>
+                       <width>16777215</width>
+                       <height>18</height>
+                      </size>
+                     </property>
                      <property name="font">
                       <font>
                        <pointsize>9</pointsize>
                       </font>
                      </property>
                      <property name="text">
-                      <string>cmH20</string>
+                      <string>s</string>
                      </property>
                      <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
+                      <set>Qt::AlignHCenter|Qt::AlignTop</set>
                      </property>
                     </widget>
                    </item>
@@ -748,7 +762,7 @@ color: rgb(255, 255, 255);
                    <property name="minimumSize">
                     <size>
                      <width>0</width>
-                     <height>0</height>
+                     <height>106</height>
                     </size>
                    </property>
                    <property name="maximumSize">
@@ -1278,6 +1292,12 @@ color: rgb(255, 255, 255);
                      </item>
                      <item>
                       <widget class="QLabel" name="label_127">
+                       <property name="maximumSize">
+                        <size>
+                         <width>16777215</width>
+                         <height>20</height>
+                        </size>
+                       </property>
                        <property name="font">
                         <font>
                          <pointsize>9</pointsize>
@@ -1287,7 +1307,7 @@ color: rgb(255, 255, 255);
                         <string>cmH20</string>
                        </property>
                        <property name="alignment">
-                        <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
+                        <set>Qt::AlignHCenter|Qt::AlignTop</set>
                        </property>
                       </widget>
                      </item>
@@ -1376,16 +1396,22 @@ color: rgb(255, 255, 255);
                      </item>
                      <item>
                       <widget class="QLabel" name="label_130">
+                       <property name="maximumSize">
+                        <size>
+                         <width>16777215</width>
+                         <height>20</height>
+                        </size>
+                       </property>
                        <property name="font">
                         <font>
                          <pointsize>9</pointsize>
                         </font>
                        </property>
                        <property name="text">
-                        <string>cmH20</string>
+                        <string>%</string>
                        </property>
                        <property name="alignment">
-                        <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
+                        <set>Qt::AlignHCenter|Qt::AlignTop</set>
                        </property>
                       </widget>
                      </item>
@@ -1655,6 +1681,12 @@ color: rgb(255, 255, 255);
                    </item>
                    <item>
                     <widget class="QLabel" name="label_70">
+                     <property name="maximumSize">
+                      <size>
+                       <width>16777215</width>
+                       <height>20</height>
+                      </size>
+                     </property>
                      <property name="font">
                       <font>
                        <pointsize>9</pointsize>
@@ -1756,13 +1788,19 @@ color: rgb(255, 255, 255);
                    </item>
                    <item>
                     <widget class="QLabel" name="label_68">
+                     <property name="maximumSize">
+                      <size>
+                       <width>16777215</width>
+                       <height>20</height>
+                      </size>
+                     </property>
                      <property name="font">
                       <font>
                        <pointsize>9</pointsize>
                       </font>
                      </property>
                      <property name="text">
-                      <string>l/min</string>
+                      <string>L/min</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
@@ -1857,13 +1895,19 @@ color: rgb(255, 255, 255);
                    </item>
                    <item>
                     <widget class="QLabel" name="label_69">
+                     <property name="maximumSize">
+                      <size>
+                       <width>16777215</width>
+                       <height>20</height>
+                      </size>
+                     </property>
                      <property name="font">
                       <font>
                        <pointsize>9</pointsize>
                       </font>
                      </property>
                      <property name="text">
-                      <string>ml</string>
+                      <string>mL</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
@@ -2051,13 +2095,19 @@ QPushButton:hover:!pressed
                      </item>
                      <item>
                       <widget class="QLabel" name="label_63">
+                       <property name="maximumSize">
+                        <size>
+                         <width>16777215</width>
+                         <height>20</height>
+                        </size>
+                       </property>
                        <property name="font">
                         <font>
                          <pointsize>9</pointsize>
                         </font>
                        </property>
                        <property name="text">
-                        <string>ml</string>
+                        <string>mL</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
@@ -2228,13 +2278,19 @@ QPushButton:hover:!pressed
                      </item>
                      <item>
                       <widget class="QLabel" name="label_89">
+                       <property name="maximumSize">
+                        <size>
+                         <width>16777215</width>
+                         <height>20</height>
+                        </size>
+                       </property>
                        <property name="font">
                         <font>
                          <pointsize>9</pointsize>
                         </font>
                        </property>
                        <property name="text">
-                        <string>cmH20</string>
+                        <string>s</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
@@ -2405,13 +2461,19 @@ QPushButton:hover:!pressed
                      </item>
                      <item>
                       <widget class="QLabel" name="label_90">
+                       <property name="maximumSize">
+                        <size>
+                         <width>16777215</width>
+                         <height>20</height>
+                        </size>
+                       </property>
                        <property name="font">
                         <font>
                          <pointsize>9</pointsize>
                         </font>
                        </property>
                        <property name="text">
-                        <string>cmH20</string>
+                        <string>bpm</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
@@ -2586,13 +2648,19 @@ QPushButton:hover:!pressed
                      </item>
                      <item>
                       <widget class="QLabel" name="label_62">
+                       <property name="maximumSize">
+                        <size>
+                         <width>16777215</width>
+                         <height>20</height>
+                        </size>
+                       </property>
                        <property name="font">
                         <font>
                          <pointsize>9</pointsize>
                         </font>
                        </property>
                        <property name="text">
-                        <string>cmH20</string>
+                        <string>%</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
@@ -2763,6 +2831,12 @@ QPushButton:hover:!pressed
                      </item>
                      <item>
                       <widget class="QLabel" name="label_65">
+                       <property name="maximumSize">
+                        <size>
+                         <width>16777215</width>
+                         <height>20</height>
+                        </size>
+                       </property>
                        <property name="font">
                         <font>
                          <pointsize>9</pointsize>
@@ -2940,6 +3014,12 @@ QPushButton:hover:!pressed
                      </item>
                      <item>
                       <widget class="QLabel" name="label_66">
+                       <property name="maximumSize">
+                        <size>
+                         <width>16777215</width>
+                         <height>20</height>
+                        </size>
+                       </property>
                        <property name="font">
                         <font>
                          <pointsize>9</pointsize>
@@ -3144,13 +3224,19 @@ QPushButton:hover:!pressed
                    </item>
                    <item>
                     <widget class="QLabel" name="label_67">
+                     <property name="maximumSize">
+                      <size>
+                       <width>16777215</width>
+                       <height>20</height>
+                      </size>
+                     </property>
                      <property name="font">
                       <font>
                        <pointsize>9</pointsize>
                       </font>
                      </property>
                      <property name="text">
-                      <string>cmH20</string>
+                      <string>%</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
