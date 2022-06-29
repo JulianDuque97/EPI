@@ -96,7 +96,7 @@ class Main(QMainWindow):
         client.publish(topic_3, '0')
         
         self.posicion_motor = '0'
-        
+        self.ppeak = 0
         self.timer = QtCore.QTimer()
         
         self.wt.signal_input.connect(self.banner)
@@ -121,32 +121,10 @@ class Main(QMainWindow):
         self.graphWidget_2.hide()
         self.graphWidget_3.hide()
         
-        self.altura_linedit.setReadOnly(True)
-        self.peso_linedit.setReadOnly(True)
-        self.sexo_linedit.setReadOnly(True)
-        self.covid_linedit.setReadOnly(True)
-        
-        self.tabWidget.currentChanged.connect(self.tabs)
-        self.altura_slider.valueChanged.connect(self.altura)
-        self.peso_slider.valueChanged.connect(self.peso)
-        self.sexo_slider.valueChanged.connect(self.sexo)
-        self.covid_slider.valueChanged.connect(self.covid)
-        
-        self.encendido_radioButton.toggled.connect(self.encendido)
-        self.detener_radioButton.toggled.connect(self.detener)
+        self.checkBox.toggled.connect(self.encendido_apagado)
                
         self.Vt_slider.valueChanged.connect(self.change_Vt)
-        
-        self.altura_ = '140'
-        self.peso_ = '40'
-        self._sexo_ = 'Hombre'
-        self._covid_ = 'No'
-        
-        self.altura_linedit.setText(self.altura_)
-        self.peso_linedit.setText(self.peso_)
-        self.sexo_ = self.sexo_linedit.setText('Mujer')
-        self.covid_ = self.covid_linedit.setText('No')
-        
+          
         self.on_off = 0
         
         today = date.today()
@@ -168,33 +146,39 @@ class Main(QMainWindow):
             self.posicion_motor = '0'
             self.Vt_label.setText('0')
             self.Vt_label_2.setText('0')
+            self.presion_label.setText('0')
             client.publish(topic_3, self.posicion_motor)
            
         elif value_Vt == 1:
+            self.ppeak = 0
             self.posicion_motor = '3'
             self.Vt_label.setText('138')
             self.Vt_label_2.setText('138')
-            client.publish(topic_3, self.posicion_motor)
+            client.publish(topic_3, self.posicion_motor)    
             
         elif value_Vt == 2:
+            self.ppeak = 0
             self.posicion_motor = '4'
             self.Vt_label.setText('191.5')
             self.Vt_label_2.setText('191.5')
             client.publish(topic_3, self.posicion_motor)
             
         elif value_Vt == 3:
+            self.ppeak = 0
             self.posicion_motor = '5'
             self.Vt_label.setText('252')
             self.Vt_label_2.setText('252')
             client.publish(topic_3, self.posicion_motor)
         
         elif value_Vt == 4:
+            self.ppeak = 0
             self.posicion_motor = '6'
             self.Vt_label.setText('316.7')
             self.Vt_label_2.setText('316.7')
             client.publish(topic_3, self.posicion_motor)
             
         elif value_Vt == 5:
+            self.ppeak = 0
             self.posicion_motor = '7'
             self.Vt_label.setText('378.1')
             self.Vt_label_2.setText('378.1')
@@ -204,81 +188,63 @@ class Main(QMainWindow):
         if self.on_off == 1:
             self.on_off = 0
             self.play_stop_button_.setText('Stop')
+            self.Vt_slider.setEnabled(True)
             self.timer.start()
         else:
             self.on_off = 1
             self.play_stop_button_.setText('Play')
+            self.Vt_slider.setEnabled(False)
             self.timer.stop()
-        
-    def altura(self):
-        self.altura_ = str(self.altura_slider.value())
-        self.altura_linedit.setText(self.altura_)
-        
-    def peso(self):
-        self.peso_ = str(self.peso_slider.value())
-        self.peso_linedit.setText(self.peso_)
-
-    def sexo(self):
-        self.sexo_ = self.sexo_slider.value()
-        if self.sexo_ == 1:
-            self._sexo_ = 'Hombre'
-            self.sexo_linedit.setText(self._sexo_)
-        else:
-            self._sexo_ = 'Mujer'
-            self.sexo_linedit.setText(self._sexo_)
-  
-    def covid(self):
-        self.covid_ = self.covid_slider.value()
-        if self.covid_ == 1:
-            self._covid_ = 'Si'
-            self.covid_linedit.setText(self._covid_)
-        else:
-            self._covid_ = 'No'
-            self.covid_linedit.setText(self._covid_)
-        
-    def tabs(self):
-        index = self.tabWidget.currentIndex()
-        if index == 1:
-            self.altura_label.setText(self.altura_)
-            self.peso_label.setText(self.peso_)
-            self.sexo_label.setText(self._sexo_)
-            self.covid_label.setText(self._covid_)
             
-    def encendido(self):
-        self.grafica_ = 1
-        client.publish(topic_3, self.posicion_motor)
-        self.graphWidget_1.clear()
-        self.graphWidget_2.clear()
-        self.graphWidget_3.clear()
-        self.on_off_label.setText('Sistema: Encendido')
-        self.encendido_radioButton.setText("Encendido")
-        self.detener_radioButton.setText("Detener")
-        self.play_stop_button_.setEnabled(True)
-        self.grafica_button.setEnabled(True)
-        self.Vt_slider.setEnabled(True)          
-        self.img_on_off.setPixmap(QtGui.QPixmap("Images/oxygen-mask.jpg"))
-        #COLOR GRAFICAS    
-        pen = pg.mkPen(color=(255, 0, 0))
-        pen2 = pg.mkPen(color=(0, 0, 255))
-        pen3 = pg.mkPen(color=(0, 128, 0))
-        #LABELS GRAFICAS
-        self.graphWidget_1.setLabel('bottom', 'Paw')
-        self.graphWidget_2.setLabel('bottom', 'Flujo')
-        self.graphWidget_3.setLabel('bottom', 'Volumen')
-        #ACTIVANDO THREAD
-        #self.wt.signal_input.connect(self.update_plot_data)
-        self.wt.signal_input.connect(self.dato)
-        #PASANDO X,Y & COLORES A LA GRAFICA
-        self.data_line_1 = self.graphWidget_1.plot(self.x, self.y1, pen=pen)        
-        self.data_line_2 = self.graphWidget_2.plot(self.x, self.y2, pen=pen2)
-        self.data_line_3 = self.graphWidget_3.plot(self.x, self.y3, pen=pen3)
-        #ACTIVANDO EL TIMER, SE PUEDE CAMBIAR EL TIEMPO DE MUESTREO PARA LAS GRAFICAS
-        self.timer.timeout.connect(self.update_plot_data)
-        self.timer.setInterval(100)
-        self.timer.start()
+    def encendido_apagado(self):
+        self.checkBox.setEnabled(False)
+        self.presion_label.setText('0')
+        if self.checkBox.isChecked() == True:
+            self.grafica_ = 1
+            client.publish(topic_3, self.posicion_motor)
+            self.graphWidget_1.clear()
+            self.graphWidget_2.clear()
+            self.graphWidget_3.clear()
+            self.on_off_label.setText('Sistema: Encendido')
+            self.checkBox.setText("Encendido")
+            self.play_stop_button_.setEnabled(True)
+            self.grafica_button.setEnabled(True)
+            self.Vt_slider.setEnabled(True)          
+            self.img_on_off.setPixmap(QtGui.QPixmap("Images/oxygen-mask.jpg"))
+            #COLOR GRAFICAS    
+            pen = pg.mkPen(color=(255, 0, 0))
+            pen2 = pg.mkPen(color=(0, 0, 255))
+            pen3 = pg.mkPen(color=(0, 128, 0))
+            #LABELS GRAFICAS
+            self.graphWidget_1.setLabel('bottom', 'Paw')
+            self.graphWidget_2.setLabel('bottom', 'Flujo')
+            self.graphWidget_3.setLabel('bottom', 'Volumen')
+            #ACTIVANDO THREAD
+            #self.wt.signal_input.connect(self.update_plot_data)
+            self.wt.signal_input.connect(self.dato)
+            #PASANDO X,Y & COLORES A LA GRAFICA
+            self.data_line_1 = self.graphWidget_1.plot(self.x, self.y1, pen=pen)        
+            self.data_line_2 = self.graphWidget_2.plot(self.x, self.y2, pen=pen2)
+            self.data_line_3 = self.graphWidget_3.plot(self.x, self.y3, pen=pen3)
+            #ACTIVANDO EL TIMER, SE PUEDE CAMBIAR EL TIEMPO DE MUESTREO PARA LAS GRAFICAS
+            self.timer.timeout.connect(self.update_plot_data)
+            self.timer.setInterval(100)
+            self.timer.start()
+            
+        else:
+            self.checkBox.setText("Apagado")
+            client.publish(topic_3, '0')
+            self.on_off = 0
+            self.graphWidget_1.clear()
+            self.graphWidget_2.clear()
+            self.graphWidget_3.clear()
+            self.on_off_label.setText('Sistema: Apagado')
+            self.play_stop_button_.setEnabled(False)
+            self.Vt_slider.setEnabled(False)
+            self.img_on_off.setPixmap(QtGui.QPixmap("Images/old-man.jpg"))
+            
         
     def dato(self,value):
-        
         if 'p' in value:
             presion = value.replace("p", "")
             presion = float(presion)
@@ -287,6 +253,9 @@ class Main(QMainWindow):
             else:
                 self.presion = presion
                 print('Presion: '+ str(self.presion))  
+                if self.ppeak < self.presion:
+                    self.presion_label.setText(str(self.presion))
+                    self.ppeak = self.presion
             
         if 'f' in value:
             flujo = value.replace("f", "")
@@ -296,16 +265,6 @@ class Main(QMainWindow):
             else:
                 self.flujo = flujo
                 #print('Flujo: '+ str(self.flujo))
-                    
-    def detener(self):
-        client.publish(topic_3, '0')
-        self.on_off_label.setText('Sistema: Detenido')
-        self.encendido_radioButton.setText("Encender")
-        self.detener_radioButton.setText("Detenido")
-        self.play_stop_button_.setEnabled(False)
-        self.Vt_slider.setEnabled(False)
-        self.img_on_off.setPixmap(QtGui.QPixmap("Images/old-man.jpg"))
-        self.on_off = 0
         
     def grafica(self):
         if self.grafica_ == 1:
