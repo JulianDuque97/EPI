@@ -26,7 +26,8 @@ port = 1883
 topic_1 = "esp32/presion"
 topic_2 = "esp32/flujo"
 topic_3 = 'esp32/volumen'
-topic_4 = 'esp32/pagina_web'
+topic_4 = 'esp32/ti'
+topic_5 = 'esp32/volumen_tidal'
 client_id = 'Raspberry'
 client = mqtt_client.Client(client_id)
 
@@ -48,19 +49,19 @@ class WorkerThread(QThread):
                 self.subscribe(client)
                 client.loop_forever()
             except os.error:
-                print("not connected to network")
+                #print("not connected to network")
                 self.signal_input.emit("1")
             
     def connect_mqtt(self):
         def on_connect(client, userdata, flags, rc):
             if rc == 0:
                 self.signal_input.emit("0")
-                print("Connected to MQTT Broker!")
+                #print("Connected to MQTT Broker!")
 
         def on_disconnect(client, userdata, rc):
             if rc != 0:
                 self.signal_input.emit("1")
-                print("Unexpected MQTT disconnection. Will auto-reconnect")
+                #print("Unexpected MQTT disconnection. Will auto-reconnect")
                 
         client.on_connect = on_connect
         client.on_disconnect = on_disconnect
@@ -77,6 +78,7 @@ class WorkerThread(QThread):
             if msg.topic == 'esp32/flujo':
                 mssg = str(msg.payload.decode())+'f'
                 self.signal_input.emit(mssg)
+                #print(mssg)
                      
             # mssg = str(msg.payload.decode())
             # self.signal_input.emit(float(mssg))
@@ -97,6 +99,10 @@ class Main(QMainWindow):
         
         self.posicion_motor = '0'
         self.ppeak = 0
+        self.pflujo = 0
+        self.valor_2 = 0
+        self.tct = 0
+        self.flujo = 0
         self.timer = QtCore.QTimer()
         
         self.wt.signal_input.connect(self.banner)
@@ -104,6 +110,7 @@ class Main(QMainWindow):
         self.play_stop_button_.setEnabled(False)
         self.grafica_button.setEnabled(False)
         self.Vt_slider.setEnabled(False)
+        self.Ti_slider.setEnabled(False)
         self.play_stop_button_.clicked.connect(self.play_stop)
         self.grafica_button.clicked.connect(self.grafica)
                                
@@ -124,11 +131,55 @@ class Main(QMainWindow):
         self.checkBox.toggled.connect(self.encendido_apagado)
                
         self.Vt_slider.valueChanged.connect(self.change_Vt)
+        self.Ti_slider.valueChanged.connect(self.change_Ti)
           
         self.on_off = 0
         
         today = date.today()
         self.date_label.setText(str(today))
+        
+    def change_Ti(self):
+        value_Ti = self.Ti_slider.value()  
+        if value_Ti == 0:
+            self.Ti_label.setText('0')
+            self.Ti_label_.setText('0')
+        elif value_Ti == 1:
+            self.Ti_label.setText('0.6')
+            self.Ti_label_.setText('0.6') 
+        elif value_Ti == 2:
+            self.Ti_label.setText('0.7')
+            self.Ti_label_.setText('0.7')
+        elif value_Ti == 3:
+            self.Ti_label.setText('0.8')
+            self.Ti_label_.setText('0.8') 
+        elif value_Ti == 4:
+            self.Ti_label.setText('0.9')
+            self.Ti_label_.setText('0.9') 
+        elif value_Ti == 5:
+            self.Ti_label.setText('1.0')
+            self.Ti_label_.setText('1.0') 
+        elif value_Ti == 6:
+            self.Ti_label.setText('1.1')
+            self.Ti_label_.setText('1.1') 
+        elif value_Ti == 7:
+            self.Ti_label.setText('1.2')
+            self.Ti_label_.setText('1.2') 
+        elif value_Ti == 8:
+            self.Ti_label.setText('1.3')
+            self.Ti_label_.setText('1.3') 
+        elif value_Ti == 9:
+            self.Ti_label.setText('1.4')
+            self.Ti_label_.setText('1.4')  
+        elif value_Ti == 10:
+            self.Ti_label.setText('1.5')
+            self.Ti_label_.setText('1.5')
+        self.Value_Ti = self.Ti_label.text()
+        self.Value_Ti = float(self.Value_Ti)
+        client.publish(topic_4, self.Value_Ti)
+        Value_Te = self.Value_Ti*2
+        self.Te_label.setText(str(Value_Te))
+        self.Te_label_2.setText(str(Value_Te))
+        self.tct = self.Value_Ti + Value_Te
         
     def banner(self,value):
         if value == '1':
@@ -139,65 +190,70 @@ class Main(QMainWindow):
             self.label.setText("CONNECTED")  
         
     def change_Vt(self):
-        
         value_Vt = self.Vt_slider.value()
-        
         if value_Vt == 0:
             self.posicion_motor = '0'
             self.Vt_label.setText('0')
             self.Vt_label_2.setText('0')
             self.presion_label.setText('0')
-            client.publish(topic_3, self.posicion_motor)
+            #client.publish(topic_3, self.posicion_motor)
            
         elif value_Vt == 1:
             self.ppeak = 0
             self.posicion_motor = '3'
             self.Vt_label.setText('138')
             self.Vt_label_2.setText('138')
-            client.publish(topic_3, self.posicion_motor)    
+            #client.publish(topic_3, self.posicion_motor)    
             
         elif value_Vt == 2:
             self.ppeak = 0
             self.posicion_motor = '4'
             self.Vt_label.setText('191.5')
             self.Vt_label_2.setText('191.5')
-            client.publish(topic_3, self.posicion_motor)
+            #client.publish(topic_3, self.posicion_motor)
             
         elif value_Vt == 3:
             self.ppeak = 0
             self.posicion_motor = '5'
             self.Vt_label.setText('252')
             self.Vt_label_2.setText('252')
-            client.publish(topic_3, self.posicion_motor)
+            #client.publish(topic_3, self.posicion_motor)
         
         elif value_Vt == 4:
             self.ppeak = 0
             self.posicion_motor = '6'
             self.Vt_label.setText('316.7')
             self.Vt_label_2.setText('316.7')
-            client.publish(topic_3, self.posicion_motor)
+            #client.publish(topic_3, self.posicion_motor)
             
         elif value_Vt == 5:
             self.ppeak = 0
             self.posicion_motor = '7'
             self.Vt_label.setText('378.1')
             self.Vt_label_2.setText('378.1')
-            client.publish(topic_3, self.posicion_motor)
+            #client.publish(topic_3, self.posicion_motor)
+            
+        client.publish(topic_3, self.posicion_motor)
             
     def play_stop(self):
         if self.on_off == 1:
             self.on_off = 0
             self.play_stop_button_.setText('Stop')
+            client.publish(topic_3, self.posicion_motor)
             self.Vt_slider.setEnabled(True)
+            self.Ti_slider.setEnabled(True)
             self.timer.start()
         else:
             self.on_off = 1
+            client.publish(topic_3, '0')
             self.play_stop_button_.setText('Play')
             self.Vt_slider.setEnabled(False)
+            self.Ti_slider.setEnabled(False)
             self.timer.stop()
             
     def encendido_apagado(self):
         self.checkBox.setEnabled(False)
+        self.Ti_slider.setEnabled(True)
         self.presion_label.setText('0')
         if self.checkBox.isChecked() == True:
             self.grafica_ = 1
@@ -248,22 +304,40 @@ class Main(QMainWindow):
         if 'p' in value:
             presion = value.replace("p", "")
             presion = float(presion)
-            if presion <= 1:
+            if presion < 0.8:
                 self.presion = 0
             else:
                 self.presion = presion
-                print('Presion: '+ str(self.presion))  
-                if self.ppeak < self.presion:
-                    self.presion_label.setText(str(self.presion))
-                    self.ppeak = self.presion
+            #print('Presion: '+ str(self.presion))  
+            if self.ppeak < self.presion:
+                self.presion_label.setText(str(self.presion))
+                self.pip_label.setText(str(self.presion))
+                self.ppeak = self.presion
             
         if 'f' in value:
             flujo = value.replace("f", "")
             flujo = float(flujo)
-            if flujo <= 1:
-                self.flujo = 0
-            else:
-                self.flujo = flujo
+            self.flujo = flujo
+            
+            if self.pflujo < self.flujo:
+                self.U_label.setText(str(self.flujo))
+                self.U_label_2.setText(str(self.flujo))
+                self.pflujo = self.flujo
+        
+        if self.valor_2 <= self.tct:
+            self.valor_1 = self.tct * 0.01
+            self.valor_2 = self.valor_1
+            self.volumen = self.flujo*self.valor_2
+            self.volumen = self.volumen*1000
+            self.valor_2 = self.valor_2+self.valor_1
+            client.publish(topic_5, str(self.volumen))
+            
+            #self.volumen = flujo * self.tiempo_muestreo
+            
+            # if flujo < 0.8:
+            #     self.flujo = 0
+            # else:
+            #     self.flujo = flujo
                 #print('Flujo: '+ str(self.flujo))
         
     def grafica(self):
@@ -298,7 +372,8 @@ class Main(QMainWindow):
         self.y2 = self.y2[1:]  # Remove the first
         self.y2.append(self.flujo)  # Add a new random value.
         self.y3 = self.y3[1:]  # Remove the first
-        self.y3.append(randint(0,200))  # Add a new random value.
+        #self.y3.append(randint(0,200))  # Add a new random value.
+        self.y3.append(self.volumen)  # Add a new random value.
         
         self.data_line_1.setData(self.x, self.y1)  # Update the data.    
         self.data_line_2.setData(self.x, self.y2)  # Update the data. 
