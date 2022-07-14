@@ -317,7 +317,7 @@ color: rgb(255, 255, 255);
                     <number>0</number>
                    </property>
                    <item>
-                    <widget class="QLabel" name="Ppeak_label_13">
+                    <widget class="QLabel" name="f_label">
                      <property name="font">
                       <font>
                        <pointsize>20</pointsize>
@@ -351,110 +351,6 @@ color: rgb(255, 255, 255);
                      </property>
                      <property name="text">
                       <string>bpm</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignHCenter|Qt::AlignTop</set>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-              <item row="4" column="0">
-               <widget class="QFrame" name="frame_32">
-                <property name="minimumSize">
-                 <size>
-                  <width>160</width>
-                  <height>95</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>160</width>
-                  <height>90</height>
-                 </size>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">border-radius: 15px;
-background-color: rgb(129, 61, 156);
-color: rgb(255, 255, 255);
-</string>
-                </property>
-                <property name="frameShape">
-                 <enum>QFrame::NoFrame</enum>
-                </property>
-                <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
-                </property>
-                <property name="lineWidth">
-                 <number>-17</number>
-                </property>
-                <property name="midLineWidth">
-                 <number>-8</number>
-                </property>
-                <layout class="QGridLayout" name="gridLayout_48">
-                 <item row="0" column="0">
-                  <widget class="QLabel" name="label_109">
-                   <property name="font">
-                    <font>
-                     <pointsize>20</pointsize>
-                     <weight>75</weight>
-                     <bold>true</bold>
-                    </font>
-                   </property>
-                   <property name="layoutDirection">
-                    <enum>Qt::LeftToRight</enum>
-                   </property>
-                   <property name="text">
-                    <string>Ǔ</string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="0" column="1">
-                  <layout class="QVBoxLayout" name="verticalLayout_35">
-                   <property name="spacing">
-                    <number>0</number>
-                   </property>
-                   <item>
-                    <widget class="QLabel" name="U_label">
-                     <property name="font">
-                      <font>
-                       <pointsize>20</pointsize>
-                       <weight>75</weight>
-                       <bold>true</bold>
-                      </font>
-                     </property>
-                     <property name="lineWidth">
-                      <number>1</number>
-                     </property>
-                     <property name="text">
-                      <string>0</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QLabel" name="label_112">
-                     <property name="maximumSize">
-                      <size>
-                       <width>16777215</width>
-                       <height>20</height>
-                      </size>
-                     </property>
-                     <property name="font">
-                      <font>
-                       <pointsize>9</pointsize>
-                      </font>
-                     </property>
-                     <property name="text">
-                      <string>L/min</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignHCenter|Qt::AlignTop</set>
@@ -670,6 +566,110 @@ color: rgb(255, 255, 255);
                     <set>Qt::AlignCenter</set>
                    </property>
                   </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="4" column="0">
+               <widget class="QFrame" name="frame_35">
+                <property name="minimumSize">
+                 <size>
+                  <width>160</width>
+                  <height>95</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>160</width>
+                  <height>90</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">border-radius: 15px;
+background-color: rgb(129, 61, 156);
+color: rgb(255, 255, 255);
+</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::NoFrame</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <property name="lineWidth">
+                 <number>-17</number>
+                </property>
+                <property name="midLineWidth">
+                 <number>-8</number>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_61">
+                 <item row="0" column="0">
+                  <widget class="QLabel" name="label_126">
+                   <property name="font">
+                    <font>
+                     <pointsize>16</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="layoutDirection">
+                    <enum>Qt::LeftToRight</enum>
+                   </property>
+                   <property name="text">
+                    <string>Ǔ</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="1">
+                  <layout class="QVBoxLayout" name="verticalLayout_40">
+                   <property name="spacing">
+                    <number>0</number>
+                   </property>
+                   <item>
+                    <widget class="QLabel" name="SetU_label">
+                     <property name="font">
+                      <font>
+                       <pointsize>16</pointsize>
+                       <weight>75</weight>
+                       <bold>true</bold>
+                      </font>
+                     </property>
+                     <property name="lineWidth">
+                      <number>1</number>
+                     </property>
+                     <property name="text">
+                      <string>0</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="label_127">
+                     <property name="maximumSize">
+                      <size>
+                       <width>16777215</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <pointsize>9</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>cmH20</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignHCenter|Qt::AlignTop</set>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
                  </item>
                 </layout>
                </widget>
@@ -1213,7 +1213,7 @@ QPushButton:hover:!pressed
                  <number>3</number>
                 </property>
                 <item>
-                 <widget class="QFrame" name="frame_35">
+                 <widget class="QFrame" name="frame_32">
                   <property name="minimumSize">
                    <size>
                     <width>160</width>
@@ -1244,12 +1244,12 @@ color: rgb(255, 255, 255);
                   <property name="midLineWidth">
                    <number>-8</number>
                   </property>
-                  <layout class="QGridLayout" name="gridLayout_61">
+                  <layout class="QGridLayout" name="gridLayout_48">
                    <item row="0" column="0">
-                    <widget class="QLabel" name="label_126">
+                    <widget class="QLabel" name="label_109">
                      <property name="font">
                       <font>
-                       <pointsize>14</pointsize>
+                       <pointsize>10</pointsize>
                        <weight>75</weight>
                        <bold>true</bold>
                       </font>
@@ -1258,7 +1258,7 @@ color: rgb(255, 255, 255);
                       <enum>Qt::LeftToRight</enum>
                      </property>
                      <property name="text">
-                      <string>PEEP</string>
+                      <string>Ǔmax</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignCenter</set>
@@ -1266,15 +1266,15 @@ color: rgb(255, 255, 255);
                     </widget>
                    </item>
                    <item row="0" column="1">
-                    <layout class="QVBoxLayout" name="verticalLayout_40">
+                    <layout class="QVBoxLayout" name="verticalLayout_35">
                      <property name="spacing">
                       <number>0</number>
                      </property>
                      <item>
-                      <widget class="QLabel" name="Vt_label_4">
+                      <widget class="QLabel" name="U_label">
                        <property name="font">
                         <font>
-                         <pointsize>20</pointsize>
+                         <pointsize>16</pointsize>
                          <weight>75</weight>
                          <bold>true</bold>
                         </font>
@@ -1291,7 +1291,7 @@ color: rgb(255, 255, 255);
                       </widget>
                      </item>
                      <item>
-                      <widget class="QLabel" name="label_127">
+                      <widget class="QLabel" name="label_112">
                        <property name="maximumSize">
                         <size>
                          <width>16777215</width>
@@ -1304,7 +1304,7 @@ color: rgb(255, 255, 255);
                         </font>
                        </property>
                        <property name="text">
-                        <string>cmH20</string>
+                        <string>L/min</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignHCenter|Qt::AlignTop</set>
@@ -2040,6 +2040,130 @@ QPushButton:hover:!pressed
              <number>0</number>
             </property>
             <item>
+             <widget class="QFrame" name="frame_28">
+              <property name="minimumSize">
+               <size>
+                <width>170</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>185</width>
+                <height>84</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">border-radius: 15px;
+background-color: rgb(129, 61, 156);
+color: rgb(255, 255, 255);
+</string>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::Box</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <property name="lineWidth">
+               <number>-17</number>
+              </property>
+              <property name="midLineWidth">
+               <number>-8</number>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_38">
+               <item row="0" column="1">
+                <layout class="QVBoxLayout" name="verticalLayout_62">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QLabel" name="U_label_2">
+                   <property name="font">
+                    <font>
+                     <pointsize>18</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="lineWidth">
+                    <number>1</number>
+                   </property>
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignHCenter|Qt::AlignTop</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_68">
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <pointsize>9</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>L/min</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignHCenter|Qt::AlignTop</set>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item row="0" column="0">
+                <widget class="QPushButton" name="f__pushButton_4">
+                 <property name="minimumSize">
+                  <size>
+                   <width>60</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>80</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>14</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton{
+	color: rgb(247, 247, 247);
+
+	
+}
+
+QPushButton:hover {background-color: rgb(51, 209, 122);}
+
+QPushButton:hover:!pressed
+{
+  border: 1.5px solid black;
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>Ǔmax</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
              <widget class="QFrame" name="frame_39">
               <property name="minimumSize">
                <size>
@@ -2078,7 +2202,7 @@ color: rgb(255, 255, 255);
                   <number>0</number>
                  </property>
                  <item>
-                  <widget class="QLabel" name="f_label_2">
+                  <widget class="QLabel" name="SetU_label_2">
                    <property name="font">
                     <font>
                      <pointsize>18</pointsize>
@@ -2136,7 +2260,7 @@ color: rgb(255, 255, 255);
                  </property>
                  <property name="font">
                   <font>
-                   <pointsize>16</pointsize>
+                   <pointsize>14</pointsize>
                    <weight>75</weight>
                    <bold>true</bold>
                   </font>
@@ -2156,7 +2280,7 @@ QPushButton:hover:!pressed
 }</string>
                  </property>
                  <property name="text">
-                  <string>PEEP</string>
+                  <string>Ǔ</string>
                  </property>
                 </widget>
                </item>
@@ -2260,7 +2384,7 @@ color: rgb(255, 255, 255);
                  </property>
                  <property name="font">
                   <font>
-                   <pointsize>16</pointsize>
+                   <pointsize>14</pointsize>
                    <weight>75</weight>
                    <bold>true</bold>
                   </font>
@@ -2281,130 +2405,6 @@ QPushButton:hover:!pressed
                  </property>
                  <property name="text">
                   <string>PIP</string>
-                 </property>
-                </widget>
-               </item>
-              </layout>
-             </widget>
-            </item>
-            <item>
-             <widget class="QFrame" name="frame_28">
-              <property name="minimumSize">
-               <size>
-                <width>170</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>185</width>
-                <height>84</height>
-               </size>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">border-radius: 15px;
-background-color: rgb(129, 61, 156);
-color: rgb(255, 255, 255);
-</string>
-              </property>
-              <property name="frameShape">
-               <enum>QFrame::Box</enum>
-              </property>
-              <property name="frameShadow">
-               <enum>QFrame::Raised</enum>
-              </property>
-              <property name="lineWidth">
-               <number>-17</number>
-              </property>
-              <property name="midLineWidth">
-               <number>-8</number>
-              </property>
-              <layout class="QGridLayout" name="gridLayout_38">
-               <item row="0" column="1">
-                <layout class="QVBoxLayout" name="verticalLayout_62">
-                 <property name="spacing">
-                  <number>0</number>
-                 </property>
-                 <item>
-                  <widget class="QLabel" name="U_label_2">
-                   <property name="font">
-                    <font>
-                     <pointsize>18</pointsize>
-                     <weight>75</weight>
-                     <bold>true</bold>
-                    </font>
-                   </property>
-                   <property name="lineWidth">
-                    <number>1</number>
-                   </property>
-                   <property name="text">
-                    <string>0</string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignHCenter|Qt::AlignTop</set>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QLabel" name="label_68">
-                   <property name="maximumSize">
-                    <size>
-                     <width>16777215</width>
-                     <height>20</height>
-                    </size>
-                   </property>
-                   <property name="font">
-                    <font>
-                     <pointsize>9</pointsize>
-                    </font>
-                   </property>
-                   <property name="text">
-                    <string>L/min</string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignHCenter|Qt::AlignTop</set>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
-               </item>
-               <item row="0" column="0">
-                <widget class="QPushButton" name="f__pushButton_4">
-                 <property name="minimumSize">
-                  <size>
-                   <width>60</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>16777215</width>
-                   <height>80</height>
-                  </size>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <pointsize>16</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
-                  </font>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">QPushButton{
-	color: rgb(247, 247, 247);
-
-	
-}
-
-QPushButton:hover {background-color: rgb(51, 209, 122);}
-
-QPushButton:hover:!pressed
-{
-  border: 1.5px solid black;
-}</string>
-                 </property>
-                 <property name="text">
-                  <string>Ǔ</string>
                  </property>
                 </widget>
                </item>
@@ -2508,7 +2508,7 @@ color: rgb(255, 255, 255);
                  </property>
                  <property name="font">
                   <font>
-                   <pointsize>16</pointsize>
+                   <pointsize>14</pointsize>
                    <weight>75</weight>
                    <bold>true</bold>
                   </font>
@@ -2574,7 +2574,7 @@ color: rgb(255, 255, 255);
                   <number>0</number>
                  </property>
                  <item>
-                  <widget class="QLabel" name="Vt_label_10">
+                  <widget class="QLabel" name="f_label_2">
                    <property name="font">
                     <font>
                      <pointsize>18</pointsize>
@@ -2632,7 +2632,7 @@ color: rgb(255, 255, 255);
                  </property>
                  <property name="font">
                   <font>
-                   <pointsize>16</pointsize>
+                   <pointsize>14</pointsize>
                    <weight>75</weight>
                    <bold>true</bold>
                   </font>
