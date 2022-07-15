@@ -12,7 +12,7 @@ from PyQt5.QtWidgets import QApplication, QMainWindow
 from PyQt5.uic import loadUi
 from PyQt5 import QtGui
 from PyQt5 import QtCore
-from PyQt5.QtCore import QThread, pyqtSignal
+from PyQt5.QtCore import QThread, pyqtSignal, pyqtSlot
 
 from paho.mqtt import client as mqtt_client
 import paho.mqtt.client as mqtt
@@ -92,6 +92,9 @@ class WorkerThread(QThread):
         client.subscribe(topic_4)
         client.subscribe(topic_5)
         client.subscribe(topic_6)
+        client.subscribe(topic_7)
+        client.subscribe(topic_8)
+        client.subscribe(topic_9)
         client.on_message = on_message
 
 class Main(QMainWindow):
@@ -141,6 +144,7 @@ class Main(QMainWindow):
 
         self.Vt_slider.valueChanged.connect(self.change_Vt)
         self.Ti_slider.valueChanged.connect(self.change_Ti)
+
         self.kp_lineEdit.editingFinished.connect(self.control_kp)
         self.ki_lineEdit.editingFinished.connect(self.control_ki)
         self.kd_lineEdit.editingFinished.connect(self.control_kd)
@@ -151,13 +155,13 @@ class Main(QMainWindow):
         self.date_label.setText(str(today))
 
     def control_kp(self):
-        client.publish(topic_7, str(self.kp_lineEdit.editingFinished()))
+        client.publish(topic_7, str(self.kp_lineEdit.text()))
 
     def control_ki(self):
-        client.publish(topic_8, str(self.ki_lineEdit.editingFinished()))
+        client.publish(topic_8, str(self.ki_lineEdit.text()))
 
     def control_kd(self):
-        client.publish(topic_9, str(self.kd_lineEdit.editingFinished()))
+        client.publish(topic_9, str(self.kd_lineEdit.text()))
 
     def change_Ti(self):
         value_Ti = self.Ti_slider.value()
