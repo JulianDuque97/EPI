@@ -29,6 +29,9 @@ topic_3 = 'esp32/volumen'
 topic_4 = 'esp32/ti'
 topic_5 = 'esp32/volumen_tidal'
 topic_6 = 'esp32/setpoint'
+topic_7 = 'esp32/kp'
+topic_8 = 'esp32/ki'
+topic_9 = 'esp32/kd'
 client_id = 'Raspberry'
 client = mqtt_client.Client(client_id)
 
@@ -114,6 +117,9 @@ class Main(QMainWindow):
         self.grafica_button.setEnabled(False)
         self.Vt_slider.setEnabled(False)
         self.Ti_slider.setEnabled(False)
+        self.kp_lineEdit.setEnabled(False)
+        self.ki_lineEdit.setEnabled(False)
+        self.kd_lineEdit.setEnabled(False)
         self.play_stop_button_.clicked.connect(self.play_stop)
         self.grafica_button.clicked.connect(self.grafica)
 
@@ -135,11 +141,23 @@ class Main(QMainWindow):
 
         self.Vt_slider.valueChanged.connect(self.change_Vt)
         self.Ti_slider.valueChanged.connect(self.change_Ti)
+        self.kp_lineEdit.editingFinished.connect(self.control_kp)
+        self.ki_lineEdit.editingFinished.connect(self.control_ki)
+        self.kd_lineEdit.editingFinished.connect(self.control_kd)
 
         self.on_off = 0
 
         today = date.today()
         self.date_label.setText(str(today))
+
+    def control_kp(self):
+        client.publish(topic_7, str(self.kp_lineEdit.editingFinished()))
+
+    def control_ki(self):
+        client.publish(topic_8, str(self.ki_lineEdit.editingFinished()))
+
+    def control_kd(self):
+        client.publish(topic_9, str(self.kd_lineEdit.editingFinished()))
 
     def change_Ti(self):
         value_Ti = self.Ti_slider.value()
@@ -265,6 +283,9 @@ class Main(QMainWindow):
             client.publish(topic_3, self.posicion_motor)
             self.Vt_slider.setEnabled(True)
             self.Ti_slider.setEnabled(True)
+            self.kp_lineEdit.setEnabled(True)
+            self.ki_lineEdit.setEnabled(True)
+            self.kd_lineEdit.setEnabled(True)
             self.timer.start()
         else:
             self.on_off = 1
@@ -272,11 +293,17 @@ class Main(QMainWindow):
             self.play_stop_button_.setText('Play')
             self.Vt_slider.setEnabled(False)
             self.Ti_slider.setEnabled(False)
+            self.kp_lineEdit.setEnabled(False)
+            self.ki_lineEdit.setEnabled(False)
+            self.kd_lineEdit.setEnabled(False)
             self.timer.stop()
 
     def encendido_apagado(self):
         self.checkBox.setEnabled(False)
         self.Ti_slider.setEnabled(True)
+        self.kp_lineEdit.setEnabled(True)
+        self.ki_lineEdit.setEnabled(True)
+        self.kd_lineEdit.setEnabled(True)
         self.presion_label.setText('0')
         self.U_label.setText('0')
         self.U_label_2.setText('0')
