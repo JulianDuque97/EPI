@@ -361,7 +361,7 @@ class Main(QMainWindow):
             presion = float(presion)
             #presion = (((presion)* 0.8056640625)/3.2359)/10;
             presion = round(presion,2)
-            if presion < 2.0:
+            if presion < 0.99:
                 self.presion = 0
             else:
                 self.presion = presion
