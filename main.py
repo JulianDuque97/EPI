@@ -359,7 +359,12 @@ class Main(QMainWindow):
         if 'p' in value:
             presion = value.replace("p", "")
             presion = float(presion)
-            self.presion = presion
+            #presion = (((presion)* 0.8056640625)/3.2359)/10;
+            presion = round(presion,2)
+            if presion < 2.0:
+                self.presion = 0
+            else:
+                self.presion = presion
 
             if self.ppeak < self.presion:
                 self.presion_label.setText(str(self.presion))
@@ -371,7 +376,10 @@ class Main(QMainWindow):
         if 'f' in value:
             flujo = value.replace("f", "")
             flujo = float(flujo)
-            self.flujo = flujo
+            if flujo> 30:
+                self.flujo = 30
+            else:
+                self.flujo = flujo
 
         if self.valor_2 <= self.tct:
             self.valor_1 = self.tct * 0.01
