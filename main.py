@@ -376,6 +376,7 @@ class Main(QMainWindow):
         if 'f' in value:
             flujo = value.replace("f", "")
             flujo = float(flujo)
+            self.flujo = flujo
 
         if self.valor_2 <= self.tct:
             self.valor_1 = self.tct * 0.01
