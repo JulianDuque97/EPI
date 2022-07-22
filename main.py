@@ -36,7 +36,6 @@ client_id = 'Raspberry'
 client = mqtt_client.Client(client_id)
 
 valor_Vt = 0
-
 presion_average = []
 
 class WorkerThread(QThread):
@@ -101,6 +100,7 @@ class Main(QMainWindow):
     def __init__(self, parent=None):
         super(Main, self).__init__(parent)
         loadUi('_main_.ui', self)
+        self.prom = 0
 
         self.wt=WorkerThread()
         self.wt.start()
@@ -209,20 +209,20 @@ class Main(QMainWindow):
         Ti = float(self.Ti_label.text())/60
         Vt = float(self.Vt_label.text())*(1/1000)
         if Ti>0:
-            set_point = Vt/Ti
-            set_point = round(set_point, 2)
-            self.SetU_label.setText(str(set_point))
-            self.SetU_label_2.setText(str(set_point))
+            self.set_point = Vt/Ti
+            self.set_point = round(self.set_point, 2)
+            self.SetU_label.setText(str(self.set_point))
+            self.SetU_label_2.setText(str(self.set_point))
             fr = 60/((float(self.Ti_label.text()))+(float(self.Ti_label.text())*2))
             fr = round(fr,2)
             self.f_label.setText(str(fr))
             self.f_label_2.setText(str(fr))
-            client.publish(topic_6, str(set_point))
+            client.publish(topic_6, str(self.set_point))
         else:
-            set_point = 0
+            self.set_point = 0
             self.SetU_label.setText('0')
             self.SetU_label_2.setText('0')
-            client.publish(topic_6, str(set_point))
+            client.publish(topic_6, str(self.set_point))
 
     def banner(self,value):
         if value == '1':
@@ -376,7 +376,10 @@ class Main(QMainWindow):
         if 'f' in value:
             flujo = value.replace("f", "")
             flujo = float(flujo)
-            self.flujo = flujo
+            if flujo > int(self.set_point)-2:
+                self.flujo = self.set_point
+            else:
+                self.flujo = flujo
 
         if self.valor_2 <= self.tct:
             self.valor_1 = self.tct * 0.01
